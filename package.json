@@ -1,0 +1,23 @@
+{
+  "name": "farmlevis",
+  "version": "1.0.0",
+  "description": "Landing Page Farm + Levis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass --watch ./style/main.scss ./style/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitorpinho376/farmlevis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitorpinho376/farmlevis/issues"
+  },
+  "homepage": "https://github.com/vitorpinho376/farmlevis#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.2"
+  }
+}

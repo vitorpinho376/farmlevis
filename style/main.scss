@@ -1,0 +1,559 @@
+
+//Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+//Root Styles
+$primary-green: #216937;
+$primary-blue: #2D5F93;
+$primary-red: #C72127;
+$off-white: #FCF3E2;
+$white: #FFF;
+$black: #000;
+
+
+//Fonts
+
+@font-face {
+    font-family: 'trade-gothic';
+    src: url('../fonts/trade-gothic-bold.OTF');
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: 'trade-gothic';
+    src: url('../fonts/trade-gothic-book.OTF');
+    font-weight: 400;
+  }
+
+@font-face {
+    font-family: 'trade-cond';
+    src: url('../fonts/trade-cond-bold.OTF');
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: 'trade-cond';
+    src: url('../fonts/trade-cond-book.OTF');
+    font-weight: 400;
+  }
+
+@font-face {
+    font-family: 'farm-levis';
+    src:  url('../fonts/farm-levis.eot?nkw64a');
+    src:  url('../fonts/farm-levis.eot?nkw64a#iefix') format('embedded-opentype'),
+      url('../fonts/farm-levis.ttf?nkw64a') format('truetype'),
+      url('../fonts/farm-levis.woff?nkw64a') format('woff'),
+      url('../fonts/farm-levis.svg?nkw64a#farm-levis') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'farm-levis' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-logo-capa:before {
+    content: "\e900";
+  }
+  .icon-logo-ver:before {
+    content: "\e901";
+  }
+  .icon-logo-hor:before {
+    content: "\e902";
+  }
+  .icon-us-flag:before {
+    content: "\e903";
+  }
+  .icon-menu:before {
+    content: "\e904";
+  }
+  .icon-chevron-top:before {
+    content: "\e905";
+  }
+  .icon-chevron-bottom:before {
+    content: "\e906";
+  }
+  .icon-play:before {
+    content: "\e907";
+  }
+  .icon-close:before {
+    content: "\e908";
+  }
+  .icon-chevron-left:before {
+    content: "\e909";
+  }
+  .icon-chevron-right:before {
+    content: "\e90a";
+  }
+  .icon-checkbox-checked:before {
+    content: "\ea52";
+  }
+  .icon-checkbox-unchecked:before {
+    content: "\ea53";
+  }
+  .icon-radio-checked:before {
+    content: "\ea54";
+  }
+  .icon-radio-checked2:before {
+    content: "\ea55";
+  }
+  .icon-radio-unchecked:before {
+    content: "\ea56";
+  }
+  .icon-facebook2:before {
+    content: "\ea91";
+  }
+  .icon-instagram:before {
+    content: "\ea92";
+  }
+  .icon-whatsapp:before {
+    content: "\ea93";
+  }
+  .icon-spotify:before {
+    content: "\ea94";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  .icon-youtube:before {
+    content: "\ea9d";
+  }
+
+  .upcase {
+      text-transform: uppercase;
+  }
+
+  .bd {
+      font-weight: 600;
+  }
+  .lgt {
+    font-weight: 400;
+}
+
+  .heading {
+      font-size: 40px;
+      line-height: 40px;
+  }
+
+  .display {
+      font-size: 24px;
+      line-height: 32px;
+  }
+
+  .body {
+      line-height: 24px;
+      &.md {
+          font-size: 16px;
+      }
+      &.sm {
+          font-size: 14px;
+      }
+  }
+
+  .condensed {
+      font-family: 'trade-cond, sans-serif';
+  }
+
+  //Global
+
+  button {
+    outline: 0;
+    border: 0;
+  }
+  
+  body {
+    font-family: 'trade-gothic', sans-serif;
+  }
+
+  .main-header {
+      position: fixed;
+      top: 0;
+      background: transparent;
+      display: flex;
+      padding: 12px;
+      z-index: 9;
+  }
+
+  .spread {
+    margin: 40px 0;
+  }
+
+  //Hero
+
+  .main-hero {
+      background: url(../img/primary_002.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .brand-holder {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 500px;
+      position: relative;
+      & .icon {
+          color: $white;
+          font-size: 15rem;
+      }
+      & .neutral-link {
+          position: absolute;
+          bottom: 0;
+      }
+  }
+
+  //Actions
+
+  .mini-btn {
+      font-size: 10px;
+      line-height: 12px;
+      padding: 4px 12px;
+      text-transform: uppercase;
+      font-weight: 600;
+      border: 1px solid transparent;
+      border-radius: 0;
+  }
+
+  .btn {
+      font-size: 16px;
+      line-height: 22px;
+      padding: 6px 16px;
+      border: 1px solid transparent;
+      border-radius: 0;
+      font-weight: 600;
+      vertical-align: middle;
+  }
+
+  .menu-btn {
+      text-transform: uppercase;
+      color: $primary-green;
+      background-color: $white;
+      
+      & .icon {
+          margin-right: 8px;
+          line-height: 12px;
+          vertical-align: middle;
+      }
+  }
+
+  .outline-btn {
+      border: 1px solid $white;
+      color: $white;
+  }
+
+  .primary-link {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $primary-green;
+    font-weight: 600;
+    padding: 0 16px;
+  }
+
+  .outline-accent-btn {
+    box-sizing: border-box;
+    border: 2px solid $primary-green;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $primary-green;
+    line-height: 56px;
+  }
+
+  .accent-btn {
+    color: $white;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: $primary-green;
+  }
+
+  .neutral-link {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  .sub-link {
+    color: $white;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 8px 0;
+    border-bottom: 1px solid $white;
+
+    & .icon {
+      margin-left: 8px;
+    }
+  }
+
+
+//Sections
+
+  .animated-section {
+      height: 100vh;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+
+      & .round-detail {
+          position: absolute;
+          margin: 0 auto;
+          width: 100%;
+          display: flex;
+          height: 100vh;
+          align-items: center;
+          justify-content: center;
+          z-index: 3;
+          & img {
+              width: 380px;
+              height: auto;
+          }
+      }
+
+      & .animated-compose {
+          display: flex;
+          width: 100%;
+          & .image-block {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 100vh;
+              overflow: hidden;
+              & img {
+                  height: 100vh;
+              }
+          }
+      }
+  }
+
+  .location-section {
+    background: url(../img/section-location.jpg) no-repeat 100% 60% fixed; 
+    background-size: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    
+    & .container-fluid {
+        height: 100vh;
+        align-items: stretch;
+        align-content: center;
+    }
+
+    .location-content {
+        max-width: 400px;
+        height: 100%;
+        position: relative;
+        padding: 56px;
+
+        & .action-holder {
+            position: absolute;
+            bottom: 56px;
+        }
+
+    }
+  }
+
+  .lookbook {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    width: 100%;
+  }
+
+  .sidebar-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: center;
+    max-width: 380px;
+    width: 40%;
+    height: 672px;
+    padding: 8px;
+    & .sidebar-item {
+      border: 8px solid $white;
+      width: 100%;
+      height: 100%;
+      background-color: blue;
+    }
+  }
+
+  .marquee-like {
+    overflow: hidden;
+  }
+
+  .main-grid {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 672px;
+    padding: 8px;
+    & .main-item {
+      height: 50%;
+      background-color: red;
+      padding: 8px;
+      min-width: 33%;
+    }
+  }
+
+  .vd-player {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    & a {
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      & .icon {
+        color: $white;
+        font-size: 24px;
+      }
+    }
+  }
+
+  .video-player-1 {
+    background: url(../img/comp_bg_01.png) no-repeat center center; 
+    background-size: auto 100%;
+    padding: 64px 40px;
+
+    & .video-player-1-content {
+      background: url(../img/video-play01.jpg) no-repeat center center; 
+      background-size: auto 100%;
+    }
+  }
+
+
+ .sticked-menu {
+      max-width: 100%;
+      width: 100%;
+      margin: 0;
+      background-color: $white;
+      position: fixed;
+      display: none;
+
+      &.visibleMenu {
+        opacity: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch;
+        z-index: 9999;
+      }
+
+      & .close-btn {
+        line-height: 56px;
+        padding: 0 32px;
+        text-transform: uppercase;
+
+        & .icon {
+          margin-right: 8px;
+        }
+      }
+
+      & .icon-logo-hor {
+        font-size: 28px;
+        line-height: 56px;
+        vertical-align: middle;
+        margin: 0 28px;
+        color: $primary-green;
+      }
+      
+      & .outline-accent-btn {
+        margin: 0 16px;
+        height: 32px;
+        line-height: 20px;
+      }
+      & button, & span {
+        align-self: center;
+      }
+  }
+
+  .nav-holder {
+    display: flex;
+    line-height: 32px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  
+  .newsletter-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    line-height: 56px;
+    
+
+    & .message-section {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      background-color: $white;
+      flex-grow: 2;
+      padding: 0 16px;
+
+      & p {
+        margin: 0 24px;
+        font-size: 14px;
+        color: $primary-green;
+      }
+    }
+
+    & .triggers-section {
+      display: flex;
+      align-items: center;
+      flex-grow: 2;
+      background-color: $primary-green;
+      padding: 0 16px;
+
+      & a {
+        margin: 0 24px;
+      }
+    }
+
+    & .prop-asset {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      & img {
+        width: 300px;
+      }
+    }
+  }
