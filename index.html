@@ -5,9 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <!-- CSS 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
     <link rel="stylesheet" href="style/main.css">
-    <script src="js/app.js"></script>
+    
 
     <title>Farm ♥️ Levi's - Nature is the future</title>
   </head>
@@ -15,14 +16,14 @@
 
     <!-- Main Header -->
 
-    <header class="main-header">
-      <button href="#" class="btn menu-btn toggleMenu"><i class="icon icon-menu"></i> Menu</button>
+    <header class="main-header wait-anim">
+      <button href="#" onclick="showMenu();" class="btn menu-btn"><i class="icon icon-menu"></i> Menu</button>
     </header>
 
     <!-- Menu Modal -->
 
-      <div class="sticked-menu">
-            <button href="#" class="close-btn accent-btn toggleMenu"><i class="icon icon-close"></i> Close</button>
+      <div class="sticked-menu animated">
+            <button href="#" onclick="hideMenu();" class="close-btn accent-btn toggleMenu"><i class="icon icon-close"></i> Close</button>
             <span class="icon icon-logo-hor"></span>
             <div class="nav-holder">
               <a href="#" class="btn outline-accent-btn">Ver tudo</a>
@@ -40,14 +41,14 @@
     <!-- Main Hero Section -->
 
     <section class="main-hero">
-      <div class="brand-holder">
-         <span class="icon icon-logo-capa"></span>
+      <div class="brand-holder wait-anim">
+         <span class="icon icon-logo-capa animate__animated animate__bounce"></span>
          <a href="#next-section" class="neutral-link">Ver Mais</a>
       </div>
 
       <!-- Newsletter Bar -->
 
-      <div class="newsletter-bar">
+      <div class="newsletter-bar wait-anim">
         <div class="message-section">
           <p>Cadastre seu e-mail e saiba das novidades</p>
         </div>
@@ -62,42 +63,17 @@
 
     </section>
 
-    <!-- Animated Section -->
-    <section class="animated-section spread">
+     <!-- Canvas -->
 
-          <!-- Round Detail -->
-
-          <div class="round-detail">
-            <img src="img/round-lettering.svg" />
-          </div>
-
-          <!-- 1st Block -->
-
-          <div class="animated-compose">
-            <div class="image-block">
-              <img src="/img/section01.jpg" />
-            </div>
-            <div class="image-block">
-              <img src="/img/section02.jpg" />
-          </div>
-        </div>
-
-        <!-- 2nd Block -->
-
-        <div class="animated-compose">
-          <div class="image-block">
-            <img src="img/section03.jpg" />
-          </div>
-          <div class="image-block">
-            <img src="img/section04.jpg" />
-        </div>
+     <div class='canvas-contained'>
+      <div id="canvas-holder" class='container-block'>
+        <canvas id="farm-photos"></canvas>
       </div>
-      
-    </section>
+    </div>
 
     <!-- Location Section -->
 
-    <section class="location-section spread">
+    <section class="location-section spread same">
       <div class="container-fluid">
          <div class="location-content">
            <h1 class="heading upcase bd">The desire to build futures brought farm and levi’s together for 
@@ -116,57 +92,484 @@
       <img src="img/lettering_linguas.svg" />
     </div>
    
-     <!-- Lookbook -->
+    <!-- Lookbook - 1st grid -->
 
-    <section class="lookbook-section spread">
+    <section class="lookbook">
       <div class="container-fluid">
-        <div class="lookbook">
-          <div class="sidebar-grid">
+        <div class="grid-container grid-container-01">
+          <div class="sidebar">
             <div class="sidebar-item video-player-1">
-                <div class="vd-player video-player-1-content">
-                  <a href="#"><i class="icon icon-play"></i></a>
-                </div>
-            </div>
+              <div class="vd-player video-player-1-content">
+                <a href="#"><i class="icon icon-play"></i></a>
+              </div>
           </div>
-          <div class="main-grid">
-            <div class="main-item item-1">
-                item-1
-            </div>
-            <div class="main-item item-2">
-              item-2
-            </div>
-            <div class="main-item item-3">
-              item-3
-            </div>
-            <div class="main-item item-4">
-              item-4
-            </div>
-            <div class="main-item item-5">
-              item-5
-            </div>
-            <div class="main-item item-6">
-              item-6
-            </div>
+          </div>
+          <div class="grid01 grid-action">
+            <a href="#" class="mini-btn outline-btn">View Details</a>
+          </div>
+          <div class="grid02 grid-text">
+            <h3>É sobre enxergar que a vida urbana e a natureza podem estar sempre conectadas.</h3>
+          </div>
+          <div class="grid03">
+            
+          </div>
+          <div class="grid04 grid-action">
+            <a href="#" class="mini-btn outline-btn">View Details</a>
+          </div>
+          <div class="grid05">
+            
+          </div>
+          <div class="grid06">
+            
           </div>
         </div>
       </div>
-      
+    </section>
+
+     <!-- Lookbook - 2nd grid -->
+
+     <section class="lookbook">
+      <div class="container-fluid">
+        <div class="grid-container grid-container-02">
+          <div class="sidebar">
+            <div class="sidebar-item video-player-2">
+              <div class="vd-player video-player-2-content">
+                <a href="#"><i class="icon icon-play"></i></a>
+              </div>
+          </div>
+          </div>
+          <div class="grid07 grid-action">
+            <a href="#" class="mini-btn outline-btn">View Details</a>
+          </div>
+          <div class="grid08">
+            
+          </div>
+          <div class="grid09 grid-action">
+            <a href="#" class="mini-btn outline-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!-- Lookbook - 3rd grid -->
+
+     <section class="lookbook">
+      <div class="container-fluid">
+        <div class="grid-container grid-container-03">
+          <div class="sidebar">
+            <div class="sidebar-item video-player-3">
+              <div class="vd-player video-player-3-content">
+                <a href="#"><i class="icon icon-play"></i></a>
+              </div>
+          </div>
+          </div>
+          <div class="grid010 grid-text">
+            <h3>É sobre enxergar que a vida urbana e a natureza podem estar sempre conectadas.</h3>
+          </div>
+          <div class="grid011 grid-action">
+            <a href="#" class="mini-btn outline-btn">View Details</a>
+          </div>
+          <div class="grid012">
+            
+          </div>
+          <div class="grid013">
+            
+          </div>
+
+          <div class="grid014 grid-action">
+            <a href="#" class="mini-btn outline-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lookbook - Last grid -->
+
+    <section class="lookbook">
+      <div class="container-fluid">
+        <div class="grid-container grid-container-04">
+          <div class="sidebar">
+            <div class="sidebar-item video-player-4">
+              <div class="vd-player video-player-4-content">
+                <a href="#"><i class="icon icon-play"></i></a>
+              </div>
+          </div>
+          </div>
+          <div class="grid015 grid-action">
+            <a href="#" class="mini-btn outline-btn">View Details</a>
+          </div>
+          <div class="grid016 grid-action">
+            <a href="#" class="mini-btn outline-btn">View Details</a>
+          </div>
+          <div class="grid017 grid-action">
+            <a href="#" class="mini-btn outline-btn">View Details</a>
+          </div>
+          <div class="grid018">
+
+          </div>
+        </div>
+      </div>
     </section>
 
 
-   
+    <!-- Detail Lettering -->
 
-    
+    <div class="marquee-like">
+      <img src="img/lettering_linguas.svg" />
+    </div>
 
-    <!-- Optional JavaScript -->
+    <!-- Ecommerce Section -->
+
+    <section class="ecommerce-section">
+      <div class="container-fluid">
+         <div class="comm-grid">
+
+          <!-- Ecommerce Item -->
+
+          <div class="shopping-item">
+
+            <!-- Image Block -->
+
+            <div class="image-holder">
+             <img src="img/ecommerce.jpg" />
+            </div>
+            <div class="selection-card">
+              <h4 class="item-title">Nome do produto</h4>
+              <span class="price">R$ 9.999,00</span>
+
+              <!-- Size Select -->
+
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                  <input type="radio" name="options" id="option1"> XS
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2"> S
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" checked> M
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option4"> L
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option5"> XL
+                </label>
+              </div>
+              <div class="action-holder">
+                <button class="btn btn-secondary">incluir na mochila</button>
+              </div>
+            </div>
+          </div>
+
+           <!-- Ecommerce Item -->
+
+           <div class="shopping-item">
+
+            <!-- Image Block -->
+
+            <div class="image-holder">
+             <img src="img/ecommerce.jpg" />
+            </div>
+            <div class="selection-card">
+              <h4 class="item-title">Nome do produto</h4>
+              <span class="price">R$ 9.999,00</span>
+
+              <!-- Size Select -->
+
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                  <input type="radio" name="options" id="option1"> XS
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2"> S
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" checked> M
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option4"> L
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option5"> XL
+                </label>
+              </div>
+              <div class="action-holder">
+                <button class="btn btn-secondary">incluir na mochila</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ecommerce Item -->
+
+          <div class="shopping-item">
+
+            <!-- Image Block -->
+
+            <div class="image-holder">
+             <img src="img/ecommerce.jpg" />
+            </div>
+            <div class="selection-card">
+              <h4 class="item-title">Nome do produto</h4>
+              <span class="price">R$ 9.999,00</span>
+
+              <!-- Size Select -->
+
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                  <input type="radio" name="options" id="option1"> XS
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2"> S
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" checked> M
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option4"> L
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option5"> XL
+                </label>
+              </div>
+              <div class="action-holder">
+                <button class="btn btn-secondary">incluir na mochila</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ecommerce Item -->
+
+          <div class="shopping-item">
+
+            <!-- Image Block -->
+
+            <div class="image-holder">
+             <img src="img/ecommerce.jpg" />
+            </div>
+            <div class="selection-card">
+              <h4 class="item-title">Nome do produto</h4>
+              <span class="price">R$ 9.999,00</span>
+
+              <!-- Size Select -->
+
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                  <input type="radio" name="options" id="option1"> XS
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2"> S
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" checked> M
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option4"> L
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option5"> XL
+                </label>
+              </div>
+              <div class="action-holder">
+                <button class="btn btn-secondary">incluir na mochila</button>
+              </div>
+            </div>
+          </div>
+
+           <!-- Ecommerce Item -->
+
+           <div class="shopping-item">
+
+            <!-- Image Block -->
+
+            <div class="image-holder">
+             <img src="img/ecommerce.jpg" />
+            </div>
+            <div class="selection-card">
+              <h4 class="item-title">Nome do produto</h4>
+              <span class="price">R$ 9.999,00</span>
+
+              <!-- Size Select -->
+
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                  <input type="radio" name="options" id="option1"> XS
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2"> S
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" checked> M
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option4"> L
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option5"> XL
+                </label>
+              </div>
+              <div class="action-holder">
+                <button class="btn btn-secondary">incluir na mochila</button>
+              </div>
+            </div>
+          </div>
+
+         </div>
+
+         <a href="#nature-section" class="anchor-section"><i class="icon icon-chevron-bottom"></i></a>
+
+      </div>
+    </section>
+
+    <!-- Nature Section -->
+
+    <section id="nature-section" class="nature-section">
+      <div class="nature-bg">
+        <img class="nature-detail" src="img/lettering_giveback1.svg" />
+        <a href="#nature-section" class="anchor-section"><i class="icon icon-chevron-bottom"></i></a>
+      </div>
+      <div class="nature-content">
+        <p class="body md">Durante o lançamento, 14 mil árvores serão plantadas na Amazônia, através dos parceiros SOS Mata Atlântica e One Tree Planted. A ideia é que a coleção não só celebra a natureza como a reverencie na prática, através do plantio e do reflorestamento.</p>
+        <p class="body md">É sobre levar pro mundo a importância da nossa natureza, a sua beleza e as inúmeras possibilidades de preservá-la.</p>
+        <div class="arvores-detail">
+          <img src="img/lettering_giveback2.svg"/>
+        </div>
+        <div class="logo-holder">
+          <img src="img/logo-ver.png" />
+          <img src="img/sos-mata-atlantica.png" />
+          <img src="img/one-tree-planted.png" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Nature Dialogues -->
+
+    <section class="nature-dialogues">
+      <div class="section-title-img">
+        <img src="img/lettering_hashtag1.svg" />
+      </div>
+
+      <!-- Nature Dialogues Item -->
+
+      <div class="dialogue-item">
+        <div class="dialogue-content">
+          <a href="#" target="_blank" class="inta-trigger">@berthajuca</a>
+          <div class="author-bio">
+            <div class="avatar">
+              <img src="img/berthajuca.png" />
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum dignissim malesuada id condimentum egestas ipsum fringilla ut. In laoreet nulla nec nec dignissim. Turpis tellus quis semper ut a in. Amet quam eu nec vitae placerat semper neque, commodo. Sapien lectus risus arcu lacus, egestas ac facilisis. Eu nisl pellentesque augue.</p>
+          </div>
+          <div class="images-grid">
+            <img src="img/insta-grid.png" />
+            <img src="img/insta-grid.png" />
+            <img src="img/insta-grid.png" />
+            <img src="img/insta-grid.png" />
+          </div>
+        </div>
+        <div class="video-holder"></div>
+      </div>
+
+      <!-- Nature Dialogues Item -->
+
+      <div class="dialogue-item">
+        <div class="video-holder"></div>
+        <div class="dialogue-content">
+          <a href="#" target="_blank" class="inta-trigger">@luisa_matsushita</a>
+          <div class="author-bio right">
+            <div class="avatar">
+              <img src="img/matsushita.png" />
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum dignissim malesuada id condimentum egestas ipsum fringilla ut. In laoreet nulla nec nec dignissim. Turpis tellus quis semper ut a in. Amet quam eu nec vitae placerat semper neque, commodo. Sapien lectus risus arcu lacus, egestas ac facilisis. Eu nisl pellentesque augue.</p>
+          </div>
+          <div class="images-grid right">
+            <img src="img/insta-grid.png" />
+            <img src="img/insta-grid.png" />
+            <img src="img/insta-grid.png" />
+            <img src="img/insta-grid.png" />
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Instagram Slider // Nature is The Future -->
+
+    <section class="slider-container">
+      <div class="slider-title">
+        <img src="img/lettering_hashtag2.svg" />
+      </div>
+      <div class="slider-view-track">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+      </div>
+    </section>
+
+    <!-- Instagram Slider // Adoro Farm -->
+
+    <section class="slider-container">
+      <div class="slider-title">
+        <img src="img/lettering_hashtag3.svg" />
+      </div>
+      <div class="slider-view-track">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+      </div>
+    </section>
+
+
+    <!-- Newsletter Block -->
+
+    <section class="newsletter-form">
+      <div class="content">
+        <div class="content-holder">
+          <span class="icon icon-logo-capa"></span>
+          <p class="body md">
+            É do rio pro mundo. Com amor. Cadastre seu e-mail na nossa newsletter e fique por dentro das últimas novidades dessa collab mais que especial.
+          </p>
+          <form>
+            <div class="form-group">
+              <!-- <label for="input">Name</label> -->
+              <input type="text" class="form-control" placeholder="name">
+            </div>
+            <div class="form-group">
+              <!-- <label for="input">Email</label> -->
+              <input type="email" class="form-control" placeholder="email">
+            </div>
+            <div class="action-holder">
+              <button type="submit" class="form-button">Cadastrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="image-holder">
+        <img src="img/newsletter-bg.jpg" />
+      </div>
+    </section>
+
+
+
+    <!-- Optional JavaScript <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script>
-      $(".toggleMenu").click(function(){
-        $(".sticked-menu").toggleClass("visibleMenu");
-      });
-    </script>
+    <script src="js/app.js"></script>
+    <script src="js/farm-animation.js"></script>
+    
   </body>
 </html>
