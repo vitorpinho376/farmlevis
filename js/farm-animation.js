@@ -5,7 +5,7 @@
   
   const frameCount = 120;
   const currentFrame = index => (
-    `../frames/${index.toString().padStart(4, '0')}.jpg`
+    `frames/${index.toString().padStart(4, '0')}.jpg`
   )
   
   const preloadImages = () => {
