@@ -12,20 +12,21 @@
     for (let i = 1; i < frameCount; i++) {
       const img = new Image();
       img.src = currentFrame(i);
+
     }
   };
   
   const img = new Image()
   img.src = currentFrame(1);
-  canvas.width=1158;
-  canvas.height=770;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
   img.onload=function(){
-    context.drawImage(img, 0, 0);
+    context.drawImage(img, 0, 0, window.innerWidth, window.innerHeight);
   }
   
   const updateImage = index => {
     img.src = currentFrame(index);
-    context.drawImage(img, 0, 0);
+    context.drawImage(img, 0, 0, window.innerWidth, window.innerHeight);
   }
   
   window.addEventListener('scroll', () => {  
