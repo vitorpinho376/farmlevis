@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- CSS 
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <!-- CSS  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style/main.css">
     
 
@@ -29,12 +29,12 @@
               <a href="#" class="btn outline-accent-btn">Ver tudo</a>
               <a href="#" class="primary-link">Campanha</a>
               <a href="#" class="primary-link">Onde Comprar</a>
-              <a href="#" class="primary-link">Lookbook</a>
-              <a href="#" class="primary-link">Ver Produtos</a>
-              <a href="#" class="primary-link">Reflorestamento</a>
+              <a href="#lookbook-section" class="primary-link">Lookbook</a>
+              <a href="#products" class="primary-link">Ver Produtos</a>
+              <a href="#nature-section" class="primary-link">Reflorestamento</a>
               <a href="#" class="primary-link">Tô no adoro</a>
-              <a href="#" class="primary-link">Cadastre-se</a>
-              <a href="#" class="primary-link"><i class="icon icon-spotify"></i> Rádio Farm</a>
+              <a href="#newsletter-form" class="primary-link">Cadastre-se</a>
+              <a href="https://open.spotify.com/playlist/1ej2tXFs1LZOHT0IBpjS8A?si=94W3PIlZR0yDaNHrcgZLVg" target="_blank" class="primary-link"><i class="icon icon-spotify"></i> Rádio Farm</a>
             </div>
        </div>
 
@@ -43,7 +43,7 @@
     <section class="main-hero">
       <div class="brand-holder wait-anim">
          <span class="icon icon-logo-capa animate__animated animate__bounce"></span>
-         <a href="#next-section" class="neutral-link">Ver Mais</a>
+         <a href="#canvas-anim" class="neutral-link">Ver Mais <i class="icon icon-chevron-bottom"></i></a>
       </div>
 
       <!-- Newsletter Bar -->
@@ -65,7 +65,7 @@
 
      <!-- Canvas -->
 
-     <div class='canvas-contained'>
+     <div id="canvas-anim" class='canvas-contained'>
       <div id="canvas-holder" class='container-block'>
         <canvas id="farm-photos"></canvas>
       </div>
@@ -73,7 +73,7 @@
 
     <!-- Location Section -->
 
-    <section class="location-section spread same">
+    <section id="location-section" class="location-section spread same" data-aos="fade-up">
       <div class="container-fluid">
          <div class="location-content">
            <h1 class="heading upcase bd">O futuro é coletivo, feminino e autêntico. 
@@ -89,13 +89,15 @@
 
     <!-- Detail Lettering -->
 
-    <div class="marquee-like">
-      <img src="img/lettering_linguas.svg" />
+    <div id="lookbook-section" class="marquee-like">
+      <div>
+        <img src="img/lettering_linguas.svg" />
+      </div>
     </div>
    
     <!-- Lookbook - 1st grid -->
 
-    <section class="lookbook">
+    <section class="lookbook" data-aos="fade-up">
       <div class="container-fluid">
         <div class="grid-container grid-container-01">
           <div class="sidebar">
@@ -129,7 +131,7 @@
 
      <!-- Lookbook - 2nd grid -->
 
-     <section class="lookbook">
+     <section class="lookbook" data-aos="fade-up">
       <div class="container-fluid">
         <div class="grid-container grid-container-02">
           <div class="sidebar">
@@ -154,7 +156,7 @@
 
      <!-- Lookbook - 3rd grid -->
 
-     <section class="lookbook">
+     <section class="lookbook" data-aos="fade-up">
       <div class="container-fluid">
         <div class="grid-container grid-container-03">
           <div class="sidebar">
@@ -186,7 +188,7 @@
 
     <!-- Lookbook - Last grid -->
 
-    <section class="lookbook">
+    <section class="lookbook" data-aos="fade-up">
       <div class="container-fluid">
         <div class="grid-container grid-container-04">
           <div class="sidebar">
@@ -216,18 +218,21 @@
     <!-- Detail Lettering -->
 
     <div class="marquee-like">
-      <img src="img/lettering_linguas.svg" />
+      <div>
+        <img src="img/lettering_linguas.svg" />
+      </div>
     </div>
+   
 
     <!-- Ecommerce Section -->
 
-    <section class="ecommerce-section">
+    <section id="products" class="ecommerce-section">
       <div class="container-fluid">
          <div class="comm-grid">
 
           <!-- Ecommerce Item -->
 
-          <div class="shopping-item">
+          <div class="shopping-item" data-aos="fade-up">
 
             <!-- Image Block -->
 
@@ -265,7 +270,7 @@
 
            <!-- Ecommerce Item -->
 
-           <div class="shopping-item">
+           <div class="shopping-item" data-aos="fade-up">
 
             <!-- Image Block -->
 
@@ -303,7 +308,7 @@
 
           <!-- Ecommerce Item -->
 
-          <div class="shopping-item">
+          <div class="shopping-item" data-aos="fade-up">
 
             <!-- Image Block -->
 
@@ -341,7 +346,7 @@
 
           <!-- Ecommerce Item -->
 
-          <div class="shopping-item">
+          <div class="shopping-item" data-aos="fade-up">
 
             <!-- Image Block -->
 
@@ -379,7 +384,7 @@
 
            <!-- Ecommerce Item -->
 
-           <div class="shopping-item">
+           <div class="shopping-item" data-aos="fade-up">
 
             <!-- Image Block -->
 
@@ -424,7 +429,7 @@
 
     <!-- Nature Section -->
 
-    <section id="nature-section" class="nature-section">
+    <section id="nature-section" class="nature-section" data-aos="fade-up">
       <div class="nature-bg">
         <img class="nature-detail" src="img/lettering_giveback1.svg" />
         <a href="#nature-section" class="anchor-section"><i class="icon icon-chevron-bottom"></i></a>
@@ -499,7 +504,7 @@
 
     <!-- Instagram Slider // Nature is The Future -->
 
-    <section class="slider-container">
+    <section class="slider-container" data-aos="fade-up">
       <div class="slider-title">
         <img src="img/lettering_hashtag2.svg" />
       </div>
@@ -518,7 +523,7 @@
 
     <!-- Instagram Slider // Adoro Farm -->
 
-    <section class="slider-container">
+    <section class="slider-container" data-aos="fade-up">
       <div class="slider-title">
         <img src="img/lettering_hashtag3.svg" />
       </div>
@@ -538,7 +543,7 @@
 
     <!-- Newsletter Block -->
 
-    <section class="newsletter-form">
+    <section id="newsletter-form" class="newsletter-form" data-aos="fade-up">
       <div class="content">
         <div class="content-holder">
           <span class="icon icon-logo-capa"></span>
@@ -567,13 +572,16 @@
 
 
 
-    <!-- Optional JavaScript <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
     <script src="js/farm-animation.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     
   </body>
 </html>

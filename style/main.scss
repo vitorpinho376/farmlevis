@@ -378,11 +378,26 @@
     & .neutral-link {
         position: absolute;
         bottom: 0;
+        text-align: center;
+
+        & .icon {
+          font-size: 10px;
+          display: block;
+          margin-top: 16px;
+        }
     }
 }
 
 
   //Actions
+
+  a {
+    transition: all .4s ease-in-out;
+  }
+
+  .icon {
+    transition: all .4s ease-in-out;
+  }
 
   .mini-btn {
       font-size: 10px;
@@ -392,6 +407,7 @@
       font-weight: 600;
       border: 1px solid transparent;
       border-radius: 0;
+      transition: all .4s ease-in-out;
   }
 
   .btn {
@@ -402,6 +418,7 @@
       border-radius: 0;
       font-weight: 600;
       vertical-align: middle;
+      transition: all .4s ease-in-out;
   }
 
   .menu-btn {
@@ -413,6 +430,12 @@
           margin-right: 8px;
           line-height: 12px;
           vertical-align: middle;
+      }
+
+      &:hover {
+        color: $white;
+        background-color: $primary-green;
+        padding: 6px 32px;
       }
   }
 
@@ -426,6 +449,11 @@
         font-size: 12px;
         margin-left: 8px;
       }
+
+      &:hover {
+        color: $black;
+        background-color: $white;
+      }
   }
 
   .primary-link {
@@ -434,6 +462,12 @@
     color: $primary-green;
     font-weight: 600;
     padding: 0 16px;
+
+    &:hover {
+      opacity: .6;
+      color: $primary-green;
+      text-decoration: none;
+    }
   }
 
   .outline-accent-btn {
@@ -443,6 +477,12 @@
     text-transform: uppercase;
     color: $primary-green;
     line-height: 56px;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+      background-color: $primary-green;
+      color: $white;
+    }
   }
 
   .accent-btn {
@@ -450,6 +490,16 @@
     font-weight: 600;
     font-size: 16px;
     background-color: $primary-green;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+      background-color: $white;
+      color: $primary-green;
+
+      & .icon {
+        color: $primary-green;
+      }
+    }
   }
 
   .neutral-link {
@@ -457,6 +507,12 @@
     font-weight: 600;
     text-transform: uppercase;
     color: $white;
+
+    &:hover {
+      text-decoration: none;
+      color: $white;
+      opacity: .6;
+    }
   }
 
   .sub-link {
@@ -470,6 +526,13 @@
       font-size: 11px;
       margin-left: 8px;
     }
+
+    &:hover {
+      padding: 8px;
+      color: $primary-green;
+      text-decoration: none;
+      background-color: $white;
+    }
   }
 
   .anchor-section {
@@ -478,6 +541,13 @@
     margin: 0 auto;
     text-align: center;
     display: block;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+      opacity: .6;
+    }
   }
 
   .btn-secondary {
@@ -490,6 +560,12 @@
     &.active {
       color: $white;
       background-color: $black !important;
+      border-color: $black;
+    }
+
+    &:hover {
+      background-color: $black;
+      border-color: $black;
     }
   }
   
@@ -500,6 +576,12 @@
     text-decoration: underline !important;
     line-height: 24px;
     padding: 4px 24px;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+       background-color: $primary-green;
+       color: $white;
+    }
   }
   
   .inta-trigger {
@@ -512,6 +594,10 @@
 
 //Canvas Styles
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   height: 100vh;
   width:  100%;
@@ -521,7 +607,7 @@ html, body {
   position: relative;
   height: 3020px;
   display: block;
-  margin-bottom: 180px;
+  margin-bottom: 40px;
 }
 
 
@@ -651,6 +737,30 @@ canvas {
   .marquee-like {
     overflow: hidden;
   }
+   
+    .marquee-like div {
+      display: block;
+      width: 200%;
+      height: 80px;
+      vertical-align: middle;
+    
+      position: absolute;
+      overflow: hidden;
+    
+      animation: marquee 10s linear infinite;
+    }
+
+    .marquee-like img {
+      float: left;
+      width: 50%;
+    }
+
+
+  @keyframes marquee {
+    0% { left: 100%; }
+    100% { left: -100%; }
+  }
+  
 
 
   // Lookbook Grid Styles
@@ -901,6 +1011,13 @@ canvas {
         & .icon {
           color: $white;
           font-size: 24px;
+        }
+
+        &:hover {
+          text-decoration: none;
+          color: $primary-green;
+          box-shadow: 0px 40px 30px rgba(0, 0, 0, 0.3);
+  
         }
       }
     }
