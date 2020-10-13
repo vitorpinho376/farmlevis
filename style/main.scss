@@ -737,30 +737,6 @@ canvas {
   .marquee-like {
     overflow: hidden;
   }
-   
-    .marquee-like div {
-      display: block;
-      width: 200%;
-      height: 80px;
-      vertical-align: middle;
-    
-      position: absolute;
-      overflow: hidden;
-    
-      animation: marquee 10s linear infinite;
-    }
-
-    .marquee-like img {
-      float: left;
-      width: 50%;
-    }
-
-
-  @keyframes marquee {
-    0% { left: 100%; }
-    100% { left: -100%; }
-  }
-  
 
 
   // Lookbook Grid Styles
