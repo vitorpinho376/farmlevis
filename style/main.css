@@ -9915,8 +9915,8 @@ h3 {
 }
 @font-face {
   font-family: "farm-levis";
-  src: url("../fonts/farm-levis.eot?nkw64a");
-  src: url("../fonts/farm-levis.eot?nkw64a#iefix") format("embedded-opentype"), url("../fonts/farm-levis.ttf?nkw64a") format("truetype"), url("../fonts/farm-levis.woff?nkw64a") format("woff"), url("../fonts/farm-levis.svg?nkw64a#farm-levis") format("svg");
+  src: url("../fonts/farm-levis.eot?uwcl6v");
+  src: url("../fonts/farm-levis.eot?uwcl6v#iefix") format("embedded-opentype"), url("../fonts/farm-levis.ttf?uwcl6v") format("truetype"), url("../fonts/farm-levis.woff?uwcl6v") format("woff"), url("../fonts/farm-levis.svg?uwcl6v#farm-levis") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -9932,6 +9932,14 @@ h3 {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close-alt:before {
+  content: "";
+}
+
+.icon-check:before {
+  content: "";
 }
 
 .icon-logo-capa:before {
@@ -10276,6 +10284,12 @@ body {
 .outline-btn {
   border: 1px solid #FFF;
   color: #FFF;
+  font-weight: 400;
+}
+.outline-btn .icon {
+  vertical-align: middle;
+  font-size: 12px;
+  margin-left: 8px;
 }
 
 .primary-link {
@@ -10317,6 +10331,7 @@ body {
   border-bottom: 1px solid #FFF;
 }
 .sub-link .icon {
+  font-size: 11px;
   margin-left: 8px;
 }
 
@@ -10362,7 +10377,7 @@ html {
 
 .canvas-contained {
   position: relative;
-  height: 3000px;
+  height: 3020px;
   display: block;
   margin-bottom: 180px;
 }
@@ -10378,7 +10393,6 @@ canvas {
   position: relative;
   width: 100vw;
   min-height: 100vh;
-  transition: all 0.3 ease-in;
 }
 
 .text-container {
@@ -10450,14 +10464,16 @@ canvas {
   align-items: center;
   justify-content: center;
   color: #FFF;
+  position: relative;
 }
 .location-section .container-fluid, .location-section .container-sm, .location-section .container-md, .location-section .container-lg, .location-section .container-xl {
   height: 100vh;
   align-items: stretch;
   align-content: center;
+  z-index: 2;
 }
 .location-section .location-content {
-  max-width: 400px;
+  max-width: 542px;
   height: 100%;
   position: relative;
   padding: 80px 56px;
@@ -10465,6 +10481,15 @@ canvas {
 .location-section .location-content .action-holder {
   position: absolute;
   bottom: 56px;
+}
+.location-section .location-overlay {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .marquee-like {
@@ -10694,7 +10719,7 @@ canvas {
 
 .grid018 {
   grid-area: grid018;
-  background: url(../img/grid018.jpg) no-repeat center center;
+  background: url(../img/grid018.jpg) no-repeat 40% 40%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -10724,42 +10749,42 @@ canvas {
 }
 
 .video-player-1 {
-  background: url(../img/comp_bg_01.jpg) no-repeat center center;
+  background: url(../img/comp_bg_01.png) no-repeat center center;
   background-size: auto 100%;
   padding: 64px 40px;
 }
 .video-player-1 .video-player-1-content {
-  background: url(../img/video-play01.jpg) no-repeat center center;
+  background: url(../img/video-play01.png) no-repeat center center;
   background-size: auto 100%;
 }
 
 .video-player-2 {
-  background: url(../img/comp_bg_02.jpg) no-repeat center center;
+  background: url(../img/comp_bg_02.png) no-repeat center center;
   background-size: auto 100%;
   padding: 64px 40px;
 }
 .video-player-2 .video-player-2-content {
-  background: url(../img/video-play02.jpg) no-repeat center center;
+  background: url(../img/video-play02.png) no-repeat center center;
   background-size: auto 100%;
 }
 
 .video-player-3 {
-  background: url(../img/comp_bg_02.jpg) no-repeat center center;
+  background: url(../img/comp_bg_03.png) no-repeat center center;
   background-size: auto 100%;
   padding: 64px 40px;
 }
 .video-player-3 .video-player-3-content {
-  background: url(../img/video-play02.jpg) no-repeat center center;
+  background: url(../img/video-play03.png) no-repeat center center;
   background-size: auto 100%;
 }
 
 .video-player-4 {
-  background: url(../img/comp_bg_01.jpg) no-repeat center center;
+  background: url(../img/comp_bg_04.png) no-repeat center center;
   background-size: auto 100%;
   padding: 64px 40px;
 }
 .video-player-4 .video-player-4-content {
-  background: url(../img/video-play04.jpg) no-repeat center center;
+  background: url(../img/video-play04.png) no-repeat center center;
   background-size: auto 100%;
 }
 
@@ -10952,6 +10977,9 @@ label {
   justify-content: center;
   margin: 24px 16px;
 }
+.shopping-item .image-holder img {
+  width: 100%;
+}
 .shopping-item .product-name {
   font-size: 16px;
 }
@@ -10972,6 +11000,16 @@ label {
 .shopping-item .selection-card .btn-group {
   margin-top: 24px;
 }
+.shopping-item .selection-card .btn-group label {
+  width: 40px;
+  padding: 8px 8px 4px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 8px;
+}
+.shopping-item .selection-card .btn-group label input {
+  vertical-align: middle;
+}
 .shopping-item .selection-card .action-holder {
   margin-top: 24px;
 }
@@ -10986,6 +11024,7 @@ label {
   grid-template-rows: 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas: "nature-bg nature-content" "nature-bg nature-content";
+  position: relative;
 }
 .nature-section .nature-bg {
   grid-area: nature-bg;
@@ -11007,6 +11046,14 @@ label {
   bottom: 8px;
   right: 8px;
   color: #FFF;
+}
+.nature-section .sustentabilidade-detail {
+  position: absolute;
+  right: 0;
+  top: -30px;
+}
+.nature-section .sustentabilidade-detail img {
+  max-width: 308px;
 }
 .nature-section .nature-content {
   grid-area: nature-content;

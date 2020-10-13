@@ -3,7 +3,7 @@
   const canvas = document.getElementById("farm-photos");
   const context = canvas.getContext("2d");
   
-  const frameCount = 120;
+  const frameCount = 200;
   const currentFrame = index => (
     `https://vitorpinho376.github.io/farmlevis/frames/${index.toString().padStart(4, '0')}.jpg`
   )
