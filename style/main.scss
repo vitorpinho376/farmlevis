@@ -1721,21 +1721,90 @@ canvas {
 }
 
 
+@media (min-width: 1201px) {
+  .mob {
+    display: none;
+  }
+}
+
+
 @media (max-width: 1200px) {
+
+  .flex-fix {
+    margin: 16px 0;
+    & div {
+      margin: 0 8px;
+    }
+  }
+
+  .grid-blank.grid-text h3 {
+      font-size:120px;
+      font-weight: 400;
+    }
+
+
+  body {
+    overflow-x: hidden;
+  }
+  
+  .mob {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .arvores-detail {
+    & img {
+      width: 100%;
+    }
+  }
+
+  .grid-text {
+    padding: 16px;
+  }
+
+  .grid-text h3 {
+    font-size: 24px;
+  }
+
+  .newsletter-form {
+    & .content-holder {
+      padding: 32px !important;
+
+      & .icon {
+        font-size: 80px !important;
+      }
+    }
+  }
+ 
+  .flex-fix {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    min-height: 400px;
+
+    & div {
+      width: 50%;
+    }
+  }
+
+  .desktop {
+    display: none;
+  }
 
   .lookbook {
     height: auto;
     padding: 20px 0;
   }
 
+  .grid-container div {
+    height: auto;
+    min-width: 40%;
+  }
+
   .grid-container {
     display: flex;
-    flex-direction: column;
-    height: auto;
-
-    & div {
-      height: 100vh;
-    }
+    flex-wrap: wrap;
   }
 
   .ecommerce-section .comm-grid {
@@ -1801,14 +1870,11 @@ canvas {
       overflow: hidden;
       transform: translate3d(var(--move-initial), 0, 0);
       animation: marquee 10s linear infinite;
+      height: 40px;
     }
 
     & span {
-      font-size: 14px;
-      word-wrap:  normal;
-      color: $primary-blue;
-      text-transform: uppercase;
-      font-weight: 400;
+      font-size: 32px;
     }
   }
 
@@ -1841,6 +1907,22 @@ canvas {
 
 
 @media (max-width: 900px) {
+
+  .nav-holder {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    padding: 24px 0;
+
+    & a {
+        margin: 16px 0;
+    }
+  }
+
+  .location-bar {
+    flex-direction: column;
+  }
 
   .nature-section {
     display: flex;
