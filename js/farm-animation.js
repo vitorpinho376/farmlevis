@@ -1,4 +1,6 @@
 
+// Farm Canvas Animation
+
   const html = document.documentElement;
   const canvas = document.getElementById("farm-photos");
   const context = canvas.getContext("2d");
@@ -42,3 +44,4 @@
   });
   
   preloadImages()
+
