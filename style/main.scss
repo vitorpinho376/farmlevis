@@ -19,6 +19,11 @@ body {
   overflow-x: hidden;
 }
 
+.hidden {
+  display: none !important;
+}
+
+
 //Root Styles
 
 
@@ -757,6 +762,65 @@ canvas {
     }
   }
 
+  .location-bar {
+    background-color: $white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+    line-height: 32px;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    z-index: 9;
+
+    & .select-holder {
+      display: flex;
+      background-color: $primary-green;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      width: 100%;
+
+      & .country-nav a {
+        font-size: 14px;
+        color: $white;
+        padding: 0 24px;
+      }
+    }
+
+    & .brand-col {
+      display: flex;
+      padding: 16px 24px;
+      align-items: center;
+      width: 280px;
+      & .tag-text {
+        vertical-align: center;
+        font-size: 16px;
+        color: $primary-green;
+        margin-left: 24px;
+
+        & .icon {
+          font-size: 10px;
+          vertical-align: middle;
+          margin-left: 8px;
+        }
+      }
+
+      & .icon-logo-ver {
+        font-size: 32px;
+        color: $primary-green;
+      }
+    }
+
+  }
+
     // Marquee Transition
 
     .marquee-like {
@@ -1097,10 +1161,6 @@ canvas {
       background: url(../img/video-play04.png) no-repeat center center; 
       background-size: auto 100%;
     }
-  }
-
-  .hidden {
-    display: none !important;
   }
 
    // Sticked Menu Styles

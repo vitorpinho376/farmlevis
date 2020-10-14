@@ -31,7 +31,7 @@
       <div class="nav-holder">
         <a href="#" class="btn outline-accent-btn">Ver tudo</a>
         <a href="#" class="primary-link">Campanha</a>
-        <a href="#" class="primary-link">Onde Comprar</a>
+        <a href="#" class="primary-link" onclick="showBar(mapBar);">Onde Comprar</a>
         <a href="#lookbook-section" class="primary-link">Lookbook</a>
         <a href="#products" class="primary-link">Ver Produtos</a>
         <a href="#nature-section" class="primary-link">Reflorestamento</a>
@@ -57,14 +57,14 @@
         </div>
         <div class="triggers-section">
           <a href="#newsletter-form" class="sub-link">oba, quero <i class="icon icon-check"></i></a>
-          <a href="#" onclick="hideBar();" class="sub-link">não, obrigada <i class="icon icon-close-alt"></i></a>
+          <a href="#" onclick="hideBar(newsbar);" class="sub-link">não, obrigada <i class="icon icon-close-alt"></i></a>
         </div>
         <div class="prop-asset">
           <img src="img/toucan-prop.png" />
         </div>
       </div>
 
-      <!-- Newsletter Bar 
+      <!-- Newsletter Bar -->
 
       <div id="news-bar-active" class="news-bar-active animated hidden">
         <div class="image-holder">
@@ -90,7 +90,7 @@
         <div class="prop-asset">
           <img src="img/toucan-prop.png" />
         </div>
-     </div> -->
+     </div> 
 
     </section>
 
@@ -119,6 +119,48 @@
       </div>
       <div class="location-overlay"></div>
     </section>
+
+    <!-- Location Bar -->
+
+    <div id="location-bar" class="location-bar hidden">
+      <div class="brand-col">
+        <span class="icon icon-logo-ver"></span>
+        <span class="tag-text">Onde Comprar <i class="icon icon-chevron-right"></i></span>
+      </div>
+      <div id="bar-select-holder" class="select-holder">
+        <div id="country-nav" class="country-nav">
+          <a class="country-select" href="#">áfrica do sul</a>
+          <a class="country-select" href="#">Argentina</a>
+          <a class="country-select" href="#">Brasil</a>
+          <a class="country-select" href="#">Canadá</a>
+          <a class="country-select" href="#">Chile</a>
+          <a class="country-select" href="#">China</a>
+          <a class="country-select" href="#">Dubai</a>
+          <a class="country-select" href="#">Filipinas</a>
+          <a class="country-select" href="#">Hong Kong</a>
+          <a class="nav-country-trigger" href="#" onclick="navCountries(countryNav, countryNavAlt);"><i class="icon icon-chevron-right"></i></a>
+        </div>
+        <div id="country-nav-02" class="country-nav hidden">
+          <a class="nav-country-trigger" href="#" onclick="navCountries(countryNavAlt, countryNav);"><i class="icon icon-chevron-left"></i></a>
+          <a class="country-select" href="#">india</a>
+          <a class="country-select" href="#">Indonesia</a>
+          <a class="country-select" href="#">Israel</a>
+          <a class="country-select" href="#">Japão</a>
+          <a class="country-select" href="#">Malásia</a>
+          <a class="country-select" href="#">México</a>
+          <a class="country-select" href="#">Taiwan</a>
+          <a class="country-select" href="#">USA (coming soon)</a>
+        </div>
+        <button type="button" onclick="hideBar(mapBar);" class="btn outline-btn">Fechar</button>
+      </div>
+
+      <div class="country-selected hidden"> 
+        <a class="btn selected" href="#">Country</a>
+        <a class="btn outlined" href="#">Online <i class="icon icon-chevron-right"></i> Compre Agora</a>
+        <a class="btn outlined" href="#">Lojas <i class="icon icon-chevron-right"></i> Encontre uma loja</a>
+        <a class="btn outlined" href="#">Customização <i class="icon icon-chevron-right"></i> Encontre uma loja</a>
+      </div>
+    </div>
 
       <!-- Detail Lettering -->
 
