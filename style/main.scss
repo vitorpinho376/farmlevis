@@ -1651,3 +1651,24 @@ canvas {
     background-color: $primary-red;
   }
 }
+
+
+@media (max-width: 1200px) {
+  .canvas-contained {
+    display: none;
+  }
+
+  .nature-section .sustentabilidade-detail img {
+    width: 160px;
+  }
+
+  .ecommerce-section {
+    padding: 24px 0;
+  }
+
+  .main-hero .icon-logo-capa {
+    font-size: 120px;
+    padding: 24px;
+  }
+
+}

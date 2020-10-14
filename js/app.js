@@ -13,16 +13,11 @@
 
     //News Menu Show
 
-  const newsbar = document.getElementById('news-bar');
-  const newsbaractive = document.getElementById('news-bar-active');
+   const newsbar = document.getElementById('news-bar');
 
-  function ShowNewsletterBar() {
-    newsbaractive.classList.remove('hidden');
- }
-
- function hideBar() {
-  newsbar.classList.add('hidden');
- }
+    function hideBar() {
+      newsbar.classList.add('hidden');
+    }
 
 
    // Show Newsletter Success
