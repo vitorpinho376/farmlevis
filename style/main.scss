@@ -841,11 +841,12 @@ canvas {
       }
 
       & span {
-        font-size: 28px;
+        font-size: 32px;
         word-wrap:  normal;
-        color: $primary-blue;
+        color: $white;
+        -webkit-text-stroke: 1px $primary-blue; /* width and color */
         text-transform: uppercase;
-        font-weight: 400;
+        font-weight: 600;
       }
     }
     
