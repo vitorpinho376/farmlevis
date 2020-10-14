@@ -7,7 +7,7 @@
   
   const frameCount = 200;
   const currentFrame = index => (
-    `/frames/${index.toString().padStart(4, '0')}.jpg`
+    `https://vitorpinho376.github.io/farmlevis/frames/${index.toString().padStart(4, '0')}.jpg`
   )
   
   const preloadImages = () => {
