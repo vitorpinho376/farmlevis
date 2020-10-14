@@ -16,6 +16,7 @@ html, body {
 
 body {
   font-family: 'trade-gothic', sans-serif;
+  overflow-x: hidden;
 }
 
 //Root Styles
@@ -1452,6 +1453,7 @@ canvas {
 
   & .selection-card {
     background-color: $white;
+    position: relative;
     margin: 0 auto;
     margin-top: -40px;
     width: 90%;
@@ -1654,6 +1656,93 @@ canvas {
 
 
 @media (max-width: 1200px) {
+
+  .ecommerce-section .comm-grid {
+    flex-direction: column;
+
+    & .shopping-item {
+      max-width: 100%;
+      display: block;
+    }
+  }
+
+  .newsletter-form {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+
+    & .content-holder {
+      padding: 32px 0;
+    }
+
+    & .image-holder {
+      height: 400px;
+    }
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .location-section .location-content {
+    padding: 20% 5%;
+  }
+
+  .slider-title {
+    position: relative;
+    top: auto;
+    left: auto;
+    padding: 40px;
+
+    & img {
+      width: 80%;
+    }
+  }
+
+  .slider-view-track {
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: flex-start;
+
+    & .slide {
+      width: 120px;
+      height: 120px;
+      margin: 16px;
+    }
+  }
+
+  .marquee-like {
+
+    & .marquee-inner {
+      width: 400%;
+      display: block;
+      position: relative;
+      overflow: hidden;
+      transform: translate3d(var(--move-initial), 0, 0);
+      animation: marquee 10s linear infinite;
+    }
+
+    & span {
+      font-size: 14px;
+      word-wrap:  normal;
+      color: $primary-blue;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+  }
+
+  .location-section {
+    background: url(../img/section-location.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
   .canvas-contained {
     display: none;
   }
@@ -1672,3 +1761,34 @@ canvas {
   }
 
 }
+
+
+@media (max-width: 900px) {
+
+  .nature-section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .nature-bg {
+    padding: 40px 0;
+  }
+
+  .nature-section .nature-bg .nature-detail {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+
+  #news-bar {
+    display: none;
+  }
+
+  .main-hero .icon-logo-capa {
+    font-size: 90px;
+    padding: 24px;
+  }
+
+}
+
