@@ -1295,6 +1295,11 @@ canvas {
         text-align: center;
         margin: 0 8px;
 
+        &.unavailable {
+          opacity: .3;
+          pointer-events: none;
+        }
+
         & input {
           vertical-align: middle;
         }

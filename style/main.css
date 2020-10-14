@@ -11110,6 +11110,10 @@ label {
   text-align: center;
   margin: 0 8px;
 }
+.shopping-item .selection-card .btn-group label.unavailable {
+  opacity: 0.3;
+  pointer-events: none;
+}
 .shopping-item .selection-card .btn-group label input {
   vertical-align: middle;
 }
