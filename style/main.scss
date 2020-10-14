@@ -1,6 +1,22 @@
-
 //Bootstrap
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap-reboot.scss";
+@import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "../node_modules/bootstrap/scss/_button-group.scss";
+@import "../node_modules/bootstrap/scss/_buttons.scss";
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100vh;
+  width:  100%;
+}
+
+body {
+  font-family: 'trade-gothic', sans-serif;
+}
 
 //Root Styles
 
@@ -181,11 +197,11 @@
     outline: 0;
     border: 0;
   }
-  
-  body {
-    font-family: 'trade-gothic', sans-serif;
-  }
 
+  a, a:hover, a:active {
+    text-decoration: none;
+  }
+  
   .main-header {
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
@@ -485,6 +501,21 @@
     }
   }
 
+  .primary-btn {
+    color: $white;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: $primary-green;
+    transition: all .4s ease-in-out;
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: $white;
+      color: $primary-green;
+      border: 1px solid $primary-green;
+    }
+  }
+
   .accent-btn {
     color: $white;
     font-weight: 600;
@@ -569,7 +600,7 @@
     }
   }
   
-  button.form-button {
+  .form-button {
     border-radius: 0;
     background-color: $white;
     color: $primary-green !important;
@@ -577,10 +608,12 @@
     line-height: 24px;
     padding: 4px 24px;
     transition: all .4s ease-in-out;
+    border: 1px solid transparent;
 
     &:hover {
        background-color: $primary-green;
-       color: $white;
+       color: $white !important;
+       border: 1px solid $white;
     }
   }
   
@@ -593,15 +626,6 @@
 
 
 //Canvas Styles
-
-html {
-  scroll-behavior: smooth;
-}
-
-html, body {
-  height: 100vh;
-  width:  100%;
-}
 
 .canvas-contained {
   position: relative;
@@ -734,8 +758,40 @@ canvas {
 
     // Marquee Transition
 
-  .marquee-like {
-    overflow: hidden;
+    .marquee-like {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      --offset: 100vw;
+      --move-initial: calc(-60% + var(--offset));
+      --move-final: calc(0 + var(--offset));
+
+      & .marquee-inner {
+        width: 300%;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        transform: translate3d(var(--move-initial), 0, 0);
+        animation: marquee 10s linear infinite;
+      }
+
+      & span {
+        font-size: 28px;
+        word-wrap:  normal;
+        color: $primary-blue;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+    }
+    
+    @keyframes marquee {
+      0% {
+          transform: translate3d(var(--move-initial), 0, 0);
+      }
+  
+      100% {
+          transform: translate3d(var(--move-final), 0, 0);
+      }
   }
 
 
@@ -1042,6 +1098,10 @@ canvas {
     }
   }
 
+  .hidden {
+    display: none !important;
+  }
+
    // Sticked Menu Styles
 
 
@@ -1162,6 +1222,88 @@ canvas {
     }
   }
 
+  .news-bar-active {
+    position: absolute;
+    background-color: $primary-green;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    line-height: 56px;
+    height: 80px;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+
+    & .image-holder {
+      width: 124px;
+      overflow: hidden;
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    & .news-content-info {
+      max-width: 400px;
+      display: flex;
+      align-items: center;
+
+      & p {
+        font-size: 14px;
+        color: $white;
+        line-height: 18px;
+        margin: 0 24px;
+      }
+    }
+
+    & .prop-asset {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      & img {
+        width: 300px;
+      }
+    }
+
+    & .form-bar {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+
+      & .form-group {
+        display: inline-block;
+        margin: 0 16px;
+      }
+
+      & form {
+        display: flex;
+        align-items: center;
+      }
+
+      & form input {
+        padding: 0;
+        margin: 24px 0;
+        line-height: 32px;
+
+        &:focus {
+          outline: 0;
+          border-bottom: 3px solid $off-white;
+        }
+
+        &::placeholder {
+           color: $white;
+        }
+      }
+    }
+  }
+
   // Newsletter Form
 
   .newsletter-form {
@@ -1174,40 +1316,72 @@ canvas {
       "content content image-holder image-holder"
       "content content image-holder image-holder";
     height: 640px;
+
+    & .content { 
+      grid-area: content;
+      background-color: $primary-green;
+      color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      & .content-holder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 380px;
+        & p {
+          margin: 24px 0;
+        }
+        & .icon {
+          display: block;
+          margin: 24px auto;
+          font-size: 100px;
+        }
+        & .action-holder {
+          display: flex;
+          justify-content: center;
+
+          & .btn {
+            margin: 0 24px !important;
+          }
+        }
+        & form input {
+          padding: 8px;
+          display: block;
+          margin: 0 8px;
+          width: 100%;
+  
+          &:focus {
+            outline: 0;
+            border-bottom: 3px solid $off-white;
+          }
+  
+          &::placeholder {
+             color: $white;
+          }
+        }
+      }
+     }
+
+    &.success {
+      & .content { 
+        background-color: $white;
+        color: $primary-green;
+
+        & p {
+          margin: 64px 0;
+          text-align: center;
+        }
+
+        & .primary-btn {
+          max-width: 240px;
+          margin: 0 auto;
+        }
+    }
   }
 
-  .content { 
-    grid-area: content;
-    background-color: $primary-green;
-    color: $white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    & .content-holder {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      max-width: 380px;
-      & p {
-        margin: 24px 0;
-      }
-      & .icon {
-        display: block;
-        margin: 24px auto;
-        font-size: 100px;
-      }
-      & .action-holder {
-        display: flex;
-        justify-content: center;
-      }
-      & form input {
-        display: block;
-        margin: 24px 0;
-        width: 100%;
-      }
-    }
-   }
+}
 
   .image-holder { 
     grid-area: image-holder;
@@ -1267,7 +1441,9 @@ canvas {
   }
 
   & .product-name {
+    font-family: got;
     font-size: 16px;
+
   }
 
   & .price {

@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- CSS  -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style/reboot.css">
+    <link rel="stylesheet" href="style/aos.css" />
     <link rel="stylesheet" href="style/main.css">
+
+    <link rel="icon" href="favicon.png" sizes="228x228">
     
 
-    <title>Farm ♥️ Levi's - Nature is the future</title>
+    <title>Levi's ❤️ Farm - Nature is the future</title>
   </head>
   <body>
 
@@ -19,24 +22,6 @@
     <header class="main-header wait-anim">
       <button href="#" onclick="showMenu();" class="btn menu-btn"><i class="icon icon-menu"></i> Menu</button>
     </header>
-
-    <!-- Menu Modal -->
-
-      <div class="sticked-menu animated">
-            <button href="#" onclick="hideMenu();" class="close-btn accent-btn toggleMenu"><i class="icon icon-close"></i> Close</button>
-            <span class="icon icon-logo-hor"></span>
-            <div class="nav-holder">
-              <a href="#" class="btn outline-accent-btn">Ver tudo</a>
-              <a href="#" class="primary-link">Campanha</a>
-              <a href="#" class="primary-link">Onde Comprar</a>
-              <a href="#lookbook-section" class="primary-link">Lookbook</a>
-              <a href="#products" class="primary-link">Ver Produtos</a>
-              <a href="#nature-section" class="primary-link">Reflorestamento</a>
-              <a href="#" class="primary-link">Tô no adoro</a>
-              <a href="#newsletter-form" class="primary-link">Cadastre-se</a>
-              <a href="https://open.spotify.com/playlist/1ej2tXFs1LZOHT0IBpjS8A?si=94W3PIlZR0yDaNHrcgZLVg" target="_blank" class="primary-link"><i class="icon icon-spotify"></i> Rádio Farm</a>
-            </div>
-       </div>
 
     <!-- Main Hero Section -->
 
@@ -48,18 +33,46 @@
 
       <!-- Newsletter Bar -->
 
-      <div class="newsletter-bar wait-anim">
+      <div id="news-bar" class="newsletter-bar wait-anim">
         <div class="message-section">
           <p>Cadastre seu e-mail e saiba das novidades</p>
         </div>
         <div class="triggers-section">
-          <a href="#" class="sub-link">oba, quero <i class="icon icon-check"></i></a>
-          <a href="#" class="sub-link">não, obrigada <i class="icon icon-close-alt"></i></a>
+          <a href="#newsletter-form" class="sub-link">oba, quero <i class="icon icon-check"></i></a>
+          <a href="#" onclick="hideBar();" class="sub-link">não, obrigada <i class="icon icon-close-alt"></i></a>
         </div>
         <div class="prop-asset">
           <img src="img/toucan-prop.png" />
         </div>
       </div>
+
+      <!-- Newsletter Bar 
+
+      <div id="news-bar-active" class="news-bar-active animated hidden">
+        <div class="image-holder">
+          <img src="img/newsletter-detail.jpg" />
+        </div>
+        <div class="news-content-info">
+          <p>Cadastre seu e-mail na nossa newsletter e fique por dentro das últimas novidades da collab FARM + Levi’s</p>
+        </div>
+        <div class="form-bar">
+         <form>
+           <div class="form-group">
+             <input type="text" class="form-control" placeholder="name">
+           </div>
+           <div class="form-group">
+             <input type="email" class="form-control" placeholder="email">
+           </div>
+           <div class="action-holder">
+             <button type='button' onclick="newsletterSuccess();" class="btn outline-btn">Cadastrar</button>
+             <button type='button' onclick="ToggleSuccess();" class="btn outline-btn">Fechar</button>
+           </div>
+         </form>
+        </div>
+        <div class="prop-asset">
+          <img src="img/toucan-prop.png" />
+        </div>
+     </div> -->
 
     </section>
 
@@ -87,11 +100,14 @@
       <div class="location-overlay"></div>
     </section>
 
-    <!-- Detail Lettering -->
+      <!-- Detail Lettering -->
 
     <div id="lookbook-section" class="marquee-like">
-      <img src="img/lettering_linguas.svg" />
-  </div>
+      <div class="marquee-inner">
+        <span>Nature is the future iseda ni ojo iwaju 大自然是未來 a natureza é o futuro ธรรมชาติคืออนาคต la naturaleza es el futuro 自然は未来です</span>
+        <span>Nature is the future iseda ni ojo iwaju 大自然是未來 a natureza é o futuro ธรรมชาติคืออนาคต la naturaleza es el futuro 自然は未来です</span>
+      </div>
+    </div>
    
     <!-- Lookbook - 1st grid -->
 
@@ -216,9 +232,11 @@
     <!-- Detail Lettering -->
 
     <div class="marquee-like">
-        <img src="img/lettering_linguas.svg" />
+      <div class="marquee-inner">
+        <span>Nature is the future iseda ni ojo iwaju 大自然是未來 a natureza é o futuro ธรรมชาติคืออนาคต la naturaleza es el futuro 自然は未来です</span>
+        <span>Nature is the future iseda ni ojo iwaju 大自然是未來 a natureza é o futuro ธรรมชาติคืออนาคต la naturaleza es el futuro 自然は未来です</span>
+      </div>
     </div>
-   
 
     <!-- Ecommerce Section -->
 
@@ -449,11 +467,6 @@
 
     <!-- Nature Dialogues 
 
-    <section class="nature-dialogues">
-      <div class="section-title-img">
-        <img src="img/lettering_hashtag1.svg" />
-      </div>
-
       Nature Dialogues Item
 
       <div class="dialogue-item">
@@ -517,7 +530,7 @@
       </div>
     </section>
 
-    <!-- Instagram Slider // Adoro Farm -->
+    <!-- Instagram Slider // Adoro Farm 
 
     <section class="slider-container" data-aos="fade-up">
       <div class="slider-title">
@@ -534,7 +547,7 @@
         <div class="slide"></div>
         <div class="slide"></div>
       </div>
-    </section>
+    </section> -->
 
 
     <!-- Newsletter Block -->
@@ -556,7 +569,7 @@
               <input type="email" class="form-control" placeholder="email">
             </div>
             <div class="action-holder">
-              <button type="submit" class="form-button">Cadastrar</button>
+              <button type='button' onclick="newsletterSuccess();" class="form-button">Cadastrar</button>
             </div>
           </form>
         </div>
@@ -566,9 +579,43 @@
       </div>
     </section>
 
+    <!-- Menu Modal -->
+
+    <div class="sticked-menu animated">
+      <button href="#" onclick="hideMenu();" class="close-btn accent-btn toggleMenu"><i class="icon icon-close"></i> Close</button>
+      <span class="icon icon-logo-hor"></span>
+      <div class="nav-holder">
+        <a href="#" class="btn outline-accent-btn">Ver tudo</a>
+        <a href="#" class="primary-link">Campanha</a>
+        <a href="#" class="primary-link">Onde Comprar</a>
+        <a href="#lookbook-section" class="primary-link">Lookbook</a>
+        <a href="#products" class="primary-link">Ver Produtos</a>
+        <a href="#nature-section" class="primary-link">Reflorestamento</a>
+       <!-- Hide  <a href="#" class="primary-link">Tô no adoro</a> -->
+        <a href="#newsletter-form" class="primary-link">Cadastre-se</a>
+        <a href="https://open.spotify.com/playlist/1ej2tXFs1LZOHT0IBpjS8A?si=94W3PIlZR0yDaNHrcgZLVg" target="_blank" class="primary-link"><i class="icon icon-spotify"></i> Rádio Farm</a>
+      </div>
+ </div>
+
+    <!-- Success Newsletter Block -->
+
+    <section id="newsletter-form-success" class="newsletter-form success hidden animated">
+      <div class="content">
+        <div class="content-holder">
+          <span class="icon icon-logo-capa"></span>
+          <p class="body md">
+            Que bom ter você com a gente! Fica de olho que vamos te contar todas as novidades dessa collab &lt;3
+          </p>
+          <a href="https://www.farmrio.com.br/" target="_blank" class="btn primary-btn">go to farmrio.com</a>
+        </div>
+      </div>
+      <div class="image-holder">
+        <img src="img/newsletter-bg.jpg" />
+      </div>
+    </section>
 
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS   -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
