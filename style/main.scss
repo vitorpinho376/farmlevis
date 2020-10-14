@@ -1657,6 +1657,21 @@ canvas {
 
 @media (max-width: 1200px) {
 
+  .lookbook {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    & div {
+      height: 100vh;
+    }
+  }
+
   .ecommerce-section .comm-grid {
     flex-direction: column;
 
@@ -1679,10 +1694,6 @@ canvas {
     & .image-holder {
       height: 400px;
     }
-  }
-
-  .desktop {
-    display: none;
   }
 
   .location-section .location-content {
