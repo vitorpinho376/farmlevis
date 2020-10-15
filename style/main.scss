@@ -793,6 +793,13 @@ canvas {
         color: $white;
         padding: 0 24px;
       }
+      & .country-nav button {
+        font-size: 14px;
+        color: $white;
+        padding: 0 24px;
+        background-color: transparent;
+      }
+
     }
 
     & .brand-col {
