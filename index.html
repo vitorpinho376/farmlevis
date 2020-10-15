@@ -19,24 +19,25 @@
     <!-- Main Header -->
 
     <header class="main-header wait-anim">
-      <button href="#" onclick="showMenu(); hideBar(mapBar);" class="btn menu-btn"><i class="icon icon-menu"></i> Menu</button>
+      <button onclick="showMenu(); hideBar(mapBar);" class="btn menu-btn"><i class="icon icon-menu"></i> Menu</button>
     </header>
 
     <!-- Menu Modal -->
 
     <div class="sticked-menu animated">
-      <button href="#" onclick="hideMenu();" class="close-btn accent-btn toggleMenu"><i class="icon icon-close"></i> Close</button>
+      <button onclick="hideMenu();" class="close-btn accent-btn toggleMenu"><i class="icon icon-close"></i> Close</button>
       <span class="icon icon-logo-hor"></span>
       <div class="nav-holder">
-        <a href="#" onclick="hideMenu();" class="btn outline-accent-btn">Ver tudo</a>
+        <a href="/" onclick="hideMenu();" class="btn outline-accent-btn">Ver tudo</a>
         <a href="#vd-section" onclick="hideMenu();" class="primary-link">Campanha</a>
-        <button href="#" class="primary-link anchor-like" onclick="showBar(mapBar); hideMenu();">Onde Comprar</button>
+        <a href="#location-section" onclick="hideMenu();" class="primary-link">Onde Comprar</a>
+        <!-- <button href="#" class="primary-link anchor-like" onclick="showBar(mapBar); hideMenu();">Onde Comprar</button> -->
         <a href="#lookbook-section" onclick="hideMenu();" class="primary-link">Lookbook</a>
         <a href="#products" onclick="hideMenu();" class="primary-link">Ver Produtos</a>
         <a href="#nature-section" onclick="hideMenu();" class="primary-link">Reflorestamento</a>
         <!-- Hide  <a href="#" class="primary-link">Tô no adoro</a> -->
         <a href="#newsletter-form" onclick="hideMenu();" class="primary-link">Cadastre-se</a>
-        <a href="https://open.spotify.com/playlist/1ej2tXFs1LZOHT0IBpjS8A?si=94W3PIlZR0yDaNHrcgZLVg" onclick="hideMenu();" target="_blank" class="primary-link"><i class="icon icon-spotify"></i> Rádio Farm</a>
+        <a href="https://open.spotify.com/playlist/1ej2tXFs1LZOHT0IBpjS8A?si=94W3PIlZR0yDaNHrcgZLVg" onclick="hideMenu();" target="_blank" rel="noopener noreferrer" class="primary-link"><i class="icon icon-spotify"></i> Rádio Farm</a>
       </div>
     </div>
 
