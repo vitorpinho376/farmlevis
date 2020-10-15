@@ -3,6 +3,22 @@ var productsWrapper = document.getElementById('products');
 var urlPrefix = window.location.port ? 'https://www.farmrio.com.br' : '';
 var searchApiEndpoint = urlPrefix + '/api/catalog_system/pub/products/search';
 
+Number.prototype.formatMoney = function(c, d, t) {
+    var n = this;
+    c = isNaN((c = Math.abs(c))) ? 2 : c || 2;
+    d = d || ',';
+    t = t || ',';
+    var s = n < 0 ? '-' : '';
+    var i = parseInt((n = Math.abs(+n || 0).toFixed(c))) + '';
+    var j = (j = i.length) > 3 ? j % 3 : 0;
+    return (
+        s +
+        (j ? i.substr(0, j) + t : '') +
+        i.substr(j).replace(/(\d{3})(?=\d)/g, '$1' + t) +
+        (c ? d + Math.abs(n - i).toFixed(c).slice(2) : '')
+    );
+};
+
 function getAvailability(sku) {
     try {
         return !!sku.sellers[0].commertialOffer.AvailableQuantity;
@@ -38,7 +54,7 @@ function renderProductPrice(skus) {
             return sku.sellers[0].commertialOffer.AvailableQuantity;
         }).sellers[0].commertialOffer.Price;
 
-        return 'R$ ' + price.toLocaleString('pt-BR');
+        return 'R$ ' + price.formatMoney().replace(',00', '');
     } catch (error) {
         console.error(`renderProductPrice -> error`, error);
     }
