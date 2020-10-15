@@ -413,7 +413,7 @@ body {
 
   //Actions
 
-  a {
+  a, button {
     transition: all .4s ease-in-out;
   }
 
@@ -1174,6 +1174,10 @@ canvas {
       background-color: $white;
       position: fixed;
       display: none;
+
+      & .anchor-like {
+        background: transparent;
+      }
 
       &.visibleMenu {
         opacity: 1;
