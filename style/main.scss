@@ -631,7 +631,7 @@ body {
   }
 
 
-//Canvas Styles
+//Video BG Styles
 
 .video-bg {
    height: 1200px;
@@ -1706,6 +1706,20 @@ body {
 
 @media (max-width: 1200px) {
 
+
+  .video-bg {
+    height: auto;
+ 
+     & video {
+       object-fit: cover;
+       width: 100vw;
+       height: 100vh;
+       position: relative;
+       top: 0;
+       left: 0;
+     }
+ }
+
   .slider-container {
     margin: 16px 0;
     & .slider-view-track {
@@ -1867,12 +1881,15 @@ body {
   .marquee-like {
 
     & .marquee-inner {
-      width: 400%;
+      width: 500%;
       display: block;
       position: relative;
       overflow: hidden;
+      --offset: 100vw;
+      --move-initial: calc(-80% + var(--offset));
+      --move-final: calc(0 + var(--offset));
       transform: translate3d(var(--move-initial), 0, 0);
-      animation: marquee 10s linear infinite;
+      animation: marquee 12s linear infinite;
       height: 40px;
     }
 
@@ -1882,11 +1899,18 @@ body {
   }
 
   .location-section {
+    position: relative;
+    min-height: auto;
+    height: 900px;
     background: url(../img/section-location.jpg) no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    & .location-content {
+      padding-top: 20px;
+    }
   }
 
   .logo-holder {
@@ -1919,6 +1943,7 @@ body {
 
 @media (max-width: 900px) {
 
+  
   .mini-btn {
     font-size: 12px;
     line-height: 24px;
