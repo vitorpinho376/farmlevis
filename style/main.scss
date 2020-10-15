@@ -413,7 +413,7 @@ body {
 
   //Actions
 
-  a {
+  a, button {
     transition: all .4s ease-in-out;
   }
 
@@ -778,7 +778,7 @@ canvas {
     animation-duration: 1s;
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
-    z-index: 9;
+    z-index: 10;
 
     & .select-holder {
       display: flex;
@@ -793,6 +793,13 @@ canvas {
         color: $white;
         padding: 0 24px;
       }
+      & .country-nav button {
+        font-size: 14px;
+        color: $white;
+        padding: 0 24px;
+        background-color: transparent;
+      }
+
     }
 
     & .brand-col {
@@ -1146,6 +1153,10 @@ canvas {
       background-color: $white;
       position: fixed;
       display: none;
+
+      & .anchor-like {
+        background: transparent;
+      }
 
       &.visibleMenu {
         opacity: 1;
@@ -1890,6 +1901,18 @@ canvas {
 
     & a {
         margin: 16px 0;
+    }
+  }
+
+  .select-holder {
+    height: auto;
+    & .country-nav {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      width: 100%;
+      padding: 24px 0;
     }
   }
 
