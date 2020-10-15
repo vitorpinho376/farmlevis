@@ -38,7 +38,7 @@ function getAvailability(sku) {
 function renderSizeSelector(skus, productId) {
     try {
         return skus.map(function(sku) {
-            if (!sku || !sku.Tamanho[0]) return null;
+            if (!sku || !sku.Tamanho || !sku.Tamanho[0]) return null;
 
             var size = sku.Tamanho[0];
             var available = getAvailability(sku);
