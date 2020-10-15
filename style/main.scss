@@ -1931,6 +1931,18 @@ canvas {
     }
   }
 
+  .select-holder {
+    height: auto;
+    & .country-nav {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      width: 100%;
+      padding: 24px 0;
+    }
+  }
+
   .location-bar {
     flex-direction: column;
   }
