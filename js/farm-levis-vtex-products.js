@@ -2,6 +2,13 @@ var $body = $('body');
 var productsWrapper = document.getElementById('products');
 var urlPrefix = window.location.port ? 'https://www.farmrio.com.br' : '';
 var searchApiEndpoint = urlPrefix + '/api/catalog_system/pub/products/search';
+var modalConfirmButtonColor = '#2d5f93';
+var addToCartErrorModal = Swal.mixin({
+    title: 'Houve um erro ao adicionar o produto',
+    icon: 'error',
+    confirmButtonText: 'ok',
+    confirmButtonColor: modalConfirmButtonColor,
+});
 
 Number.prototype.formatMoney = function(c, d, t) {
     var n = this;
@@ -141,10 +148,11 @@ function bindEvents() {
 
     // add to cart
     $body.on('click', '.selection-card .action-holder .btn', function(event) {
+        var $this = $(event.currentTarget);
+        
         try {
-            if (!window.vtexjs) return;
+            if (!window.vtexjs) throw new Error('vtexjs is undefined');
 
-            var $this = $(event.currentTarget);
             var $sizeSelected = $this.closest('.selection-card').find('input:checked');
             var itemObj = {
                 id: $sizeSelected.val(),
@@ -153,11 +161,25 @@ function bindEvents() {
             };
 
             $this.text('adicionando...');
-            vtexjs.checkout.addToCart([itemObj]).done(function(orderForm) {
+            vtexjs.checkout.addToCart([itemObj]).done(function() {
                 $this.text('incluir na mochila');
+                Swal.fire({
+                    title: 'Produto adicionado com sucesso',
+                    icon: 'success',
+                    confirmButtonText: 'ir para a mochila',
+                    confirmButtonColor: modalConfirmButtonColor,
+                    showCancelButton: true,
+                    cancelButtonText: 'continuar olhando'
+                }).then(function(data) {
+                    if (data.isConfirmed) window.location = '/checkout';
+                });
+            }).fail(function() {
+                addToCartErrorModal.fire();
             });
         } catch (error) {
             console.error(`bindEvents -> error`, error);
+            $this.text('incluir na mochila');
+            addToCartErrorModal.fire();
         }
     });
 }
