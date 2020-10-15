@@ -2,6 +2,29 @@ var $body = $('body');
 var productsWrapper = document.getElementById('products');
 var urlPrefix = window.location.port ? 'https://www.farmrio.com.br' : '';
 var searchApiEndpoint = urlPrefix + '/api/catalog_system/pub/products/search';
+var modalConfirmButtonColor = '#2d5f93';
+var addToCartErrorModal = Swal.mixin({
+    title: 'Houve um erro ao adicionar o produto',
+    icon: 'error',
+    confirmButtonText: 'ok',
+    confirmButtonColor: modalConfirmButtonColor,
+});
+
+Number.prototype.formatMoney = function(c, d, t) {
+    var n = this;
+    c = isNaN((c = Math.abs(c))) ? 2 : c || 2;
+    d = d || ',';
+    t = t || ',';
+    var s = n < 0 ? '-' : '';
+    var i = parseInt((n = Math.abs(+n || 0).toFixed(c))) + '';
+    var j = (j = i.length) > 3 ? j % 3 : 0;
+    return (
+        s +
+        (j ? i.substr(0, j) + t : '') +
+        i.substr(j).replace(/(\d{3})(?=\d)/g, '$1' + t) +
+        (c ? d + Math.abs(n - i).toFixed(c).slice(2) : '')
+    );
+};
 
 function getAvailability(sku) {
     try {
@@ -38,7 +61,7 @@ function renderProductPrice(skus) {
             return sku.sellers[0].commertialOffer.AvailableQuantity;
         }).sellers[0].commertialOffer.Price;
 
-        return 'R$ ' + price.toLocaleString('pt-BR');
+        return 'R$ ' + price.formatMoney().replace(',00', '');
     } catch (error) {
         console.error(`renderProductPrice -> error`, error);
     }
@@ -125,10 +148,11 @@ function bindEvents() {
 
     // add to cart
     $body.on('click', '.selection-card .action-holder .btn', function(event) {
+        var $this = $(event.currentTarget);
+        
         try {
-            if (!window.vtexjs) return;
+            if (!window.vtexjs) throw new Error('vtexjs is undefined');
 
-            var $this = $(event.currentTarget);
             var $sizeSelected = $this.closest('.selection-card').find('input:checked');
             var itemObj = {
                 id: $sizeSelected.val(),
@@ -137,11 +161,25 @@ function bindEvents() {
             };
 
             $this.text('adicionando...');
-            vtexjs.checkout.addToCart([itemObj]).done(function(orderForm) {
+            vtexjs.checkout.addToCart([itemObj]).done(function() {
                 $this.text('incluir na mochila');
+                Swal.fire({
+                    title: 'Produto adicionado com sucesso',
+                    icon: 'success',
+                    confirmButtonText: 'ir para a mochila',
+                    confirmButtonColor: modalConfirmButtonColor,
+                    showCancelButton: true,
+                    cancelButtonText: 'continuar olhando'
+                }).then(function(data) {
+                    if (data.isConfirmed) window.location = '/checkout';
+                });
+            }).fail(function() {
+                addToCartErrorModal.fire();
             });
         } catch (error) {
             console.error(`bindEvents -> error`, error);
+            $this.text('incluir na mochila');
+            addToCartErrorModal.fire();
         }
     });
 }

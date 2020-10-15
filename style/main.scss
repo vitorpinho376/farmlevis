@@ -1127,47 +1127,19 @@ canvas {
       }
     }
 
-  .video-player-1 {
-    background: url(../img/comp_bg_01.png) no-repeat center center; 
-    background-size: auto 100%;
-    padding: 64px 40px;
+  .video-player {
+    position: relative;
 
-    & .video-player-1-content {
-      background: url(../img/video-play01.png) no-repeat center center; 
-      background-size: auto 100%;
-    }
-  }
-
-  .video-player-2 {
-    background: url(../img/comp_bg_02.png) no-repeat center center; 
-    background-size: auto 100%;
-    padding: 64px 40px;
-
-    & .video-player-2-content {
-      background: url(../img/video-play02.png) no-repeat center center; 
-      background-size: auto 100%;
-    }
-  }
-
-  .video-player-3 {
-    background: url(../img/comp_bg_03.png) no-repeat center center; 
-    background-size: auto 100%;
-    padding: 64px 40px;
-
-    & .video-player-3-content {
-      background: url(../img/video-play03.png) no-repeat center center; 
-      background-size: auto 100%;
-    }
-  }
-
-  .video-player-4 {
-    background: url(../img/comp_bg_04.png) no-repeat center center; 
-    background-size: auto 100%;
-    padding: 64px 40px;
-
-    & .video-player-4-content {
-      background: url(../img/video-play04.png) no-repeat center center; 
-      background-size: auto 100%;
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: auto;
+      height: 100%;
+      overflow: hidden;
+      object-fit: cover;
+      object-position: center;
+      backface-visibility: hidden;
     }
   }
 
@@ -1559,6 +1531,7 @@ canvas {
     & .action-holder {
       margin-top: 24px;
       & .btn {
+        padding: 10px 30px;
         font-weight: 400;
       }
     }
