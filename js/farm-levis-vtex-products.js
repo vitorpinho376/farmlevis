@@ -2,6 +2,7 @@ var $body = $('body');
 var productsWrapper = document.getElementById('products');
 var urlPrefix = window.location.port ? 'https://www.farmrio.com.br' : '';
 var searchApiEndpoint = urlPrefix + '/api/catalog_system/pub/products/search';
+var productsSearchQuery = '?fq=C:1&fq=specificationFilter_85:NOVIDADES&O=OrderByReleaseDateDESC&_from=0&_to=8';
 var modalConfirmButtonColor = '#2d5f93';
 var addToCartErrorModal = Swal.mixin({
     title: 'Houve um erro ao adicionar o produto',
@@ -127,7 +128,7 @@ function renderProducts(products) {
 
 function getProducts() {
     // query provisória
-    $.ajax(searchApiEndpoint + '?_from=0&_to=8', {
+    $.ajax(searchApiEndpoint + productsSearchQuery, {
         success: renderProducts,
         error: console.error
     });

@@ -40,35 +40,35 @@ body {
 
 @font-face {
     font-family: 'trade-gothic';
-    src: url('../fonts/trade-gothic-bold.OTF');
+    src: url('https://lojafarm.vtexassets.com/arquivos/farm-levis-trade-gothic-bold.OTF.css');
     font-weight: 600;
   }
 
   @font-face {
     font-family: 'trade-gothic';
-    src: url('../fonts/trade-gothic-book.OTF');
+    src: url('https://lojafarm.vtexassets.com/arquivos/farm-levis-trade-gothic-book.OTF.css');
     font-weight: 400;
   }
 
 @font-face {
     font-family: 'trade-cond';
-    src: url('../fonts/trade-cond-bold.OTF');
+    src: url('https://lojafarm.vtexassets.com/arquivos/farm-levis-trade-cond-bold.OTF.css');
     font-weight: 600;
   }
 
   @font-face {
     font-family: 'trade-cond';
-    src: url('../fonts/trade-cond-book.OTF');
+    src: url('https://lojafarm.vtexassets.com/arquivos/farm-levis-trade-cond-book.OTF.css');
     font-weight: 400;
   }
 
   @font-face {
     font-family: 'farm-levis';
-    src:  url('../fonts/farm-levis.eot?uwcl6v');
-    src:  url('../fonts/farm-levis.eot?uwcl6v#iefix') format('embedded-opentype'),
-      url('../fonts/farm-levis.ttf?uwcl6v') format('truetype'),
-      url('../fonts/farm-levis.woff?uwcl6v') format('woff'),
-      url('../fonts/farm-levis.svg?uwcl6v#farm-levis') format('svg');
+    src:  url('https://lojafarm.vtexassets.com/arquivos/farm-levis.eot.css?uwcl6v');
+    src:  url('https://lojafarm.vtexassets.com/arquivos/farm-levis.eot.css?uwcl6v#iefix') format('embedded-opentype'),
+      url('https://lojafarm.vtexassets.com/arquivos/farm-levis.ttf.css?uwcl6v') format('truetype'),
+      url('https://lojafarm.vtexassets.com/arquivos/farm-levis.woff.css?uwcl6v') format('woff'),
+      url('https://lojafarm.vtexassets.com/arquivos/farm-levis.svg.css?uwcl6v#farm-levis') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -367,7 +367,7 @@ body {
   //Hero
 
   .main-hero {
-    background: url(../img/primary_002.jpg) no-repeat center center fixed; 
+    background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-primary_002.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -713,7 +713,7 @@ body {
     // Location Section
 
   .location-section {
-    background: url(../img/section-location.jpg) no-repeat 100% 60% fixed; 
+    background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-section-location.jpg) no-repeat 100% 60% fixed; 
     background-size: 100%;
     min-height: 100vh;
     display: flex;
@@ -945,7 +945,7 @@ body {
    }
   .grid01 { 
     grid-area: grid01;
-    background: url(../img/grid01.jpg) no-repeat center center; 
+    background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-grid01.jpg) no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -960,14 +960,14 @@ body {
   }
   .grid03 { 
     grid-area: grid03;
-    background: url(../img/grid03.jpg) no-repeat center center; 
+    background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-grid03.jpg) no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
   .grid04 { 
     grid-area: grid04;
-    background: url(../img/grid04.jpg) no-repeat center center; 
+    background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-grid04.jpg) no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -975,7 +975,7 @@ body {
    }
   .grid05 { 
     grid-area: grid05;
-    background: url(../img/grid05.jpg) no-repeat center center; 
+    background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-grid05.jpg) no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -983,7 +983,7 @@ body {
   }
   .grid06 { 
     grid-area: grid06; 
-    background: url(../img/grid06.jpg) no-repeat center center; 
+    background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-grid06.jpg) no-repeat center center; 
         -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -993,7 +993,7 @@ body {
   
   .grid07 {
       grid-area: grid07; 
-      background: url(../img/grid07.jpg) no-repeat center center; 
+      background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-grid07.jpg) no-repeat center center; 
         -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -1002,7 +1002,7 @@ body {
 
   .grid08 {
       grid-area: grid08;
-      background: url(../img/grid08.jpg) no-repeat center center; 
+      background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-grid08.jpg) no-repeat center center; 
         -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -1010,7 +1010,7 @@ body {
     }
   .grid09 {
       grid-area: grid09; 
-      background: url(../img/grid09.jpg) no-repeat center center; 
+      background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-grid09.jpg) no-repeat center center; 
         -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -1023,7 +1023,7 @@ body {
 
     .grid011 { 
       grid-area: grid11;
-      background: url(../img/grid011.jpg) no-repeat center center; 
+      background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-grid011.jpg) no-repeat center center; 
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -1031,7 +1031,7 @@ body {
      }
     .grid012 { 
       grid-area: grid12;
-      background: url(../img/grid012.jpg) no-repeat center center; 
+      background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-grid012.jpg) no-repeat center center; 
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -1039,7 +1039,7 @@ body {
      }
     .grid013 { 
       grid-area: grid013;
-      background: url(../img/grid013.jpg) no-repeat center center; 
+      background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-grid013.jpg) no-repeat center center; 
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -1047,7 +1047,7 @@ body {
      }
     .grid014 { 
       grid-area: grid14;
-      background: url(../img/grid014.jpg) no-repeat center center; 
+      background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-grid014.jpg) no-repeat center center; 
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -1056,7 +1056,7 @@ body {
 
       .grid015 { 
         grid-area: grid015;
-        background: url(../img/grid015.jpg) no-repeat center center; 
+        background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-grid015.jpg) no-repeat center center; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -1065,7 +1065,7 @@ body {
 
       .grid016 { 
         grid-area: grid016;
-        background: url(../img/grid016.jpg) no-repeat center center; 
+        background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-grid016.jpg) no-repeat center center; 
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -1073,7 +1073,7 @@ body {
        }
       .grid017 { 
         grid-area: grid017;
-        background: url(../img/grid017.jpg) no-repeat center center; 
+        background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-grid017.jpg) no-repeat center center; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -1081,7 +1081,7 @@ body {
       }
       .grid018 { 
         grid-area: grid018;
-        background: url(../img/grid018.jpg) no-repeat 40% 40%; 
+        background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-grid018.jpg) no-repeat 40% 40%; 
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -1552,7 +1552,7 @@ body {
   & .nature-bg { 
     grid-area: nature-bg;
     position: relative;
-    background: url(../img/grid013.jpg) no-repeat center center; 
+    background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-grid013.jpg) no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1909,7 +1909,7 @@ body {
     position: relative;
     min-height: auto;
     height: 900px;
-    background: url(../img/section-location.jpg) no-repeat center center; 
+    background: url(https://lojafarm.vtexassets.com/arquivos/farm-levis-section-location.jpg) no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
