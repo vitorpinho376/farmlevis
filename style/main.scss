@@ -1283,6 +1283,7 @@ body {
 
       & img {
         width: 100%;
+        height: auto;
       }
     }
 
@@ -1471,9 +1472,15 @@ body {
   justify-content: center;
   margin: 24px 16px;
 
+  @media (max-width: 1200px) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
   & .image-holder {
     & img {
       width: 100%;
+      height: auto;
     }
   }
 
