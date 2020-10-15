@@ -1342,6 +1342,13 @@ body {
     }
   }
 
+
+  .arvores-detail {
+    & img {
+      width: 370px;
+    }
+  }
+
   // Newsletter Form
 
   .newsletter-form {
@@ -1760,6 +1767,10 @@ body {
     flex-direction: column;
   }
 
+  .logo-detail {
+    max-width: 300px;
+  }
+
   .arvores-detail {
     & img {
       width: 100%;
@@ -1950,6 +1961,13 @@ body {
 
 @media (max-width: 900px) {
 
+  .main-hero {
+    background: url(../img/Primary_001.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
   
   .mini-btn {
     font-size: 12px;
