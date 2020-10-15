@@ -9,7 +9,7 @@ function renderItemsCount(orderForm) {
         }, 0);
 
         $cartButtonItemsCount.text(quantity);
-        $cartButton.toggleClass('is-hidden', !$stickedMenu.hasClass('dropout'));
+        $cartButton.toggleClass('is-hidden', $stickedMenu.hasClass('dropout'));
     } catch (error) {
         console.error('renderItemsCount -> error', error);
     }
