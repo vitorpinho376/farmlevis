@@ -1,22 +1,36 @@
   //Sticked Menu
 
-  const stickedMenu = document.querySelector('div.sticked-menu');
+  var stickedMenu = document.querySelector('div.sticked-menu');
+  var cartButton = document.querySelector('.cart-button');
 
   function showMenu(){
-    stickedMenu.classList.remove('dropout');
-    stickedMenu.classList.add('visibleMenu');
-  }  
+    try {
+      stickedMenu.classList.remove('dropout');
+      stickedMenu.classList.add('visibleMenu');
+      cartButton.classList.add('is-hidden');
+    } catch (error) {
+      console.error('showMenu -> error', error);
+      stickedMenu.classList.remove('dropout');
+      stickedMenu.classList.add('visibleMenu');
+    }
+  }
   
   function hideMenu(){
-    stickedMenu.classList.add('dropout');
-  }  
+    try {
+      stickedMenu.classList.add('dropout');
+      cartButton.classList.remove('is-hidden');
+    } catch (error) {
+      console.error('hideMenu -> error', error);
+      stickedMenu.classList.add('dropout');
+    }
+  }
 
 
     //News Menu Show
 
-   const newsbar = document.getElementById('news-bar');
-   const mapBar = document.getElementById('location-bar');
-   const newsbaractive = document.getElementById('news-bar-active');
+   var newsbar = document.getElementById('news-bar');
+   var mapBar = document.getElementById('location-bar');
+   var newsbaractive = document.getElementById('news-bar-active');
 
     function hideBar(sect) {
       sect.classList.add('hidden');
@@ -28,8 +42,8 @@
 
    // Show Newsletter Success
 
-   const newsFooter = document.getElementById('newsletter-form');
-   const newsFooterSuccess = document.getElementById('newsletter-form-success');
+   var newsFooter = document.getElementById('newsletter-form');
+   var newsFooterSuccess = document.getElementById('newsletter-form-success');
  
   function newsletterSuccess() {
     newsFooter.classList.add('hidden');
@@ -38,8 +52,8 @@
 
     // Show Map Bar Nav
 
-    const countryNav =  document.getElementById('country-nav');
-    const countryNavAlt =  document.getElementById('country-nav-02');
+    var countryNav =  document.getElementById('country-nav');
+    var countryNavAlt =  document.getElementById('country-nav-02');
 
     function navCountries(country, countryAlt) {
       country.classList.add('hidden');

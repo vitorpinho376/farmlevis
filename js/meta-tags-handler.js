@@ -18,7 +18,7 @@ function metaTagsHandler() {
             }
         });
     } catch (error) {
-        console.log(`metaTagsHandler -> error`, error);
+        console.log('metaTagsHandler -> error', error);
     }
 }
 

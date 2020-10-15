@@ -31,7 +31,7 @@ function getAvailability(sku) {
     try {
         return !!sku.sellers[0].commertialOffer.AvailableQuantity;
     } catch (error) {
-        console.error(`getAvailability -> error`, error);
+        console.error('getAvailability -> error', error);
         return false;
     }
 }
@@ -52,7 +52,7 @@ function renderSizeSelector(skus, productId) {
             ';
         }).filter(Boolean).join('');
     } catch (error) {
-        console.error(`renderSizeSelector -> error`, error);
+        console.error('renderSizeSelector -> error', error);
     }
 }
 
@@ -64,7 +64,7 @@ function renderProductPrice(skus) {
 
         return 'R$ ' + price.formatMoney().replace(',00', '');
     } catch (error) {
-        console.error(`renderProductPrice -> error`, error);
+        console.error('renderProductPrice -> error', error);
     }
 }
 
@@ -113,7 +113,7 @@ function renderProduct(product) {
 
         $(productsWrapper).find('.comm-grid').append(productMarkup);
     } catch (error) {
-        console.log(`renderProduct -> error`, error);
+        console.log('renderProduct -> error', error);
     }
 }
 
@@ -122,7 +122,7 @@ function renderProducts(products) {
         products.forEach(renderProduct);
         AOS.init();
     } catch (error) {
-        console.error(`renderProducts -> error`, error);
+        console.error('renderProducts -> error', error);
     }
 }
 
@@ -182,7 +182,7 @@ function bindEvents() {
                     addToCartErrorModal.fire();
                 });
         } catch (error) {
-            console.error(`bindEvents -> error`, error);
+            console.error('bindEvents -> error', error);
             $this.text('incluir na mochila');
             addToCartErrorModal.fire();
         }
