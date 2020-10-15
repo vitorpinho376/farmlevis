@@ -633,29 +633,20 @@ body {
 
 //Canvas Styles
 
-.canvas-contained {
-  position: relative;
-  height: 3020px;
-  display: block;
-  margin-bottom: 40px;
+.video-bg {
+   height: 1200px;
+   position: relative;
+
+    & video {
+      object-fit: cover;
+      width: 100vw;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      left: 0;
+    }
 }
 
-
-.container-block {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-}
-
-
-canvas {
-  position: relative;
-  width: 100%;
-  min-height: 100%;
-}
-
-  
   .text-container {
     width: 100%;
     height: 100%;
@@ -788,7 +779,7 @@ canvas {
       padding: 0 16px;
       width: 100%;
 
-      & .country-nav a {
+      & .country-nav .country-select {
         font-size: 14px;
         color: $white;
         padding: 0 24px;
@@ -922,6 +913,7 @@ canvas {
     width: 100%;
     height: 100%;
     & .sidebar-item {
+      overflow: hidden;
       width: 100%;
       height: 100%;
     }
@@ -1714,6 +1706,17 @@ canvas {
 
 @media (max-width: 1200px) {
 
+  .slider-container {
+    margin: 16px 0;
+    & .slider-view-track {
+      & .slide {
+        width: 98px;
+        height: 98px;
+        margin: 4px;
+      }
+    }
+  }
+
   .flex-fix {
     margin: 16px 0;
     & div {
@@ -1757,6 +1760,22 @@ canvas {
       & .icon {
         font-size: 80px !important;
       }
+    }
+  }
+
+  .divisor {
+    height: 16px;
+  }
+
+  .sidebar-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    min-height: 500px;
+
+    & video {
+      width: 100%;
     }
   }
  
@@ -1870,12 +1889,14 @@ canvas {
     background-size: cover;
   }
 
-  .canvas-contained {
-    display: none;
+  .logo-holder {
+    position: relative;
+    left: -48px;
   }
 
-  .nature-section .sustentabilidade-detail img {
-    width: 160px;
+  .arvores-detail {
+    position: relative;
+    left: -30px;
   }
 
   .ecommerce-section {
@@ -1889,8 +1910,40 @@ canvas {
 
 }
 
+@media screen and (max-device-width: 1024px) {
+  .main-hero, .location-section {
+    background-attachment: scroll !important;
+  }
+
+}
 
 @media (max-width: 900px) {
+
+  .mini-btn {
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  .nav-country-trigger {
+    text-align: left;
+    margin: 18px 0;
+  }
+
+  .nature-section .nature-bg {
+    margin-top: 100px;
+    height: 400px;
+    position: relative;
+
+    & a {
+      display: none;
+    }
+
+    & .nature-detail {
+      position: absolute;
+      top: -80px;
+      right: 0;
+    }
+  }
 
   .nav-holder {
     flex-direction: column;
@@ -1902,6 +1955,11 @@ canvas {
     & a {
         margin: 16px 0;
     }
+  }
+
+  .sustentabilidade-detail {
+     bottom: 40px;
+     top: auto !important;
   }
 
   .select-holder {
@@ -1930,11 +1988,6 @@ canvas {
     padding: 40px 0;
   }
 
-  .nature-section .nature-bg .nature-detail {
-    position: relative;
-    top: auto;
-    right: auto;
-  }
 
   #news-bar {
     display: none;
@@ -1947,3 +2000,17 @@ canvas {
 
 }
 
+
+@media (max-width: 600px) { 
+
+
+  .sustentabilidade-detail {
+    bottom: 40px;
+    top: auto !important;
+
+   & img {
+     width: 160px;
+   }
+ }
+
+}

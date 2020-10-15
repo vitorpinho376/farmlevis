@@ -19,7 +19,7 @@
     <!-- Main Header -->
 
     <header class="main-header wait-anim">
-      <button href="#" onclick="showMenu();" class="btn menu-btn"><i class="icon icon-menu"></i> Menu</button>
+      <button href="#" onclick="showMenu(); hideBar(mapBar);" class="btn menu-btn"><i class="icon icon-menu"></i> Menu</button>
     </header>
 
     <!-- Menu Modal -->
@@ -28,15 +28,15 @@
       <button href="#" onclick="hideMenu();" class="close-btn accent-btn toggleMenu"><i class="icon icon-close"></i> Close</button>
       <span class="icon icon-logo-hor"></span>
       <div class="nav-holder">
-        <a href="#" class="btn outline-accent-btn">Ver tudo</a>
-        <a href="#location-section" class="primary-link">Campanha</a>
-        <button href="#" class="primary-link anchor-like" onclick="showBar(mapBar);">Onde Comprar</button>
-        <a href="#lookbook-section" class="primary-link">Lookbook</a>
-        <a href="#products" class="primary-link">Ver Produtos</a>
-        <a href="#nature-section" class="primary-link">Reflorestamento</a>
+        <a href="#" onclick="hideMenu();" class="btn outline-accent-btn">Ver tudo</a>
+        <a href="#vd-section" onclick="hideMenu();" class="primary-link">Campanha</a>
+        <button href="#" class="primary-link anchor-like" onclick="showBar(mapBar); hideMenu();">Onde Comprar</button>
+        <a href="#lookbook-section" onclick="hideMenu();" class="primary-link">Lookbook</a>
+        <a href="#products" onclick="hideMenu();" class="primary-link">Ver Produtos</a>
+        <a href="#nature-section" onclick="hideMenu();" class="primary-link">Reflorestamento</a>
         <!-- Hide  <a href="#" class="primary-link">Tô no adoro</a> -->
-        <a href="#newsletter-form" class="primary-link">Cadastre-se</a>
-        <a href="https://open.spotify.com/playlist/1ej2tXFs1LZOHT0IBpjS8A?si=94W3PIlZR0yDaNHrcgZLVg" target="_blank" class="primary-link"><i class="icon icon-spotify"></i> Rádio Farm</a>
+        <a href="#newsletter-form" onclick="hideMenu();" class="primary-link">Cadastre-se</a>
+        <a href="https://open.spotify.com/playlist/1ej2tXFs1LZOHT0IBpjS8A?si=94W3PIlZR0yDaNHrcgZLVg" onclick="hideMenu();" target="_blank" class="primary-link"><i class="icon icon-spotify"></i> Rádio Farm</a>
       </div>
     </div>
 
@@ -45,7 +45,7 @@
     <section class="main-hero">
       <div class="brand-holder wait-anim">
         <span class="icon icon-logo-capa animate__animated animate__bounce"></span>
-        <a href="#next-section" class="neutral-link">Ver Mais <i class="icon icon-chevron-bottom"></i></a>
+        <a href="#vd-section" class="neutral-link">Ver Mais <i class="icon icon-chevron-bottom"></i></a>
       </div>
 
       <!-- Newsletter Bar -->
@@ -93,15 +93,12 @@
 
     </section>
 
-    <!-- Canvas -->
+    <!-- Canvas is dead -->
 
-    <div id="next-section"></div>
-
-    <div id="canvas-anim" class='canvas-contained'>
-      <div id="canvas-holder" class='container-block'>
-        <canvas id="farm-photos"></canvas>
-      </div>
-    </div>
+    <section id="vd-section" class="video-bg">
+        <video src="frames/campaign_desk.mp4" class="desktop" muted="muted" autoplay="autoplay" loop="loop" playsinline="playsinline"></video>
+        <video src="frames/campaign_mobile.mp4" class="mob" muted="muted" autoplay="autoplay" loop="loop" playsinline="playsinline"></video>
+    </section>
 
     <!-- Location Section -->
 
@@ -128,36 +125,29 @@
       </div>
       <div id="bar-select-holder" class="select-holder">
         <div id="country-nav" class="country-nav">
-          <a class="country-select" href="#">áfrica do sul</a>
-          <a class="country-select" href="#">Argentina</a>
-          <a class="country-select" href="#">Brasil</a>
-          <a class="country-select" href="#">Canadá</a>
-          <a class="country-select" href="#">Chile</a>
-          <a class="country-select" href="#">China</a>
-          <a class="country-select" href="#">Dubai</a>
-          <a class="country-select" href="#">Filipinas</a>
-          <a class="country-select" href="#">Hong Kong</a>
+          <span class="country-select">áfrica do sul</span>
+          <span class="country-select">Argentina</span>
+          <span class="country-select">Brasil</span>
+          <span class="country-select">Canadá</span>
+          <span class="country-select">Chile</span>
+          <span class="country-select">China</span>
+          <span class="country-select">Dubai</span>
+          <span class="country-select">Filipinas</span>
+          <span class="country-select">Hong Kong</span>
           <button type="button" class="nav-country-trigger" onclick="navCountries(countryNav, countryNavAlt);"><i class="icon icon-chevron-right"></i></button>
         </div>
         <div id="country-nav-02" class="country-nav hidden">
-          <button type="button" class="nav-country-trigger" onclick="navCountries(countryNavAlt, countryNav);"><i class="icon icon-chevron-left"></i></a>
-          <a class="country-select" href="#">india</a>
-          <a class="country-select" href="#">Indonesia</a>
-          <a class="country-select" href="#">Israel</a>
-          <a class="country-select" href="#">Japão</a>
-          <a class="country-select" href="#">Malásia</a>
-          <a class="country-select" href="#">México</a>
-          <a class="country-select" href="#">Taiwan</a>
-          <a class="country-select" href="#">USA (coming soon)</a>
+          <button type="button" class="nav-country-trigger" onclick="navCountries(countryNavAlt, countryNav);"><i class="icon icon-chevron-left"></i></button>
+          <span class="country-select">india</span>
+          <span class="country-select">Indonesia</span>
+          <span class="country-select">Israel</span>
+          <span class="country-select">Japão</span>
+          <span class="country-select">Malásia</span>
+          <span class="country-select">México</span>
+          <span class="country-select">Taiwan</span>
+          <span class="country-select">USA (coming soon)</span>
         </div>
-        <button type="button" onclick="hideBar(mapBar);" class="btn outline-btn">Fechar</button>
-      </div>
-
-      <div class="country-selected hidden"> 
-        <a class="btn selected" href="#">Country</a>
-        <a class="btn outlined" href="#">Online <i class="icon icon-chevron-right"></i> Compre Agora</a>
-        <a class="btn outlined" href="#">Lojas <i class="icon icon-chevron-right"></i> Encontre uma loja</a>
-        <a class="btn outlined" href="#">Customização <i class="icon icon-chevron-right"></i> Encontre uma loja</a>
+        <button type="button" onclick="hideBar(mapBar); navCountries(countryNavAlt, countryNav);" class="btn outline-btn">Fechar</button>
       </div>
     </div>
     
@@ -177,23 +167,39 @@
       <div class="container-fluid">
         <div class="flex-fix">
           <div class="grid01 grid-action">
-            <a href="#" class="mini-btn outline-btn">View Details</a>
+            <a href="#" class="mini-btn outline-btn">Ver Detalhes</a>
           </div>
           <div class="grid02 grid-text">
             <h3>Levi’s & FARM aponta para a frente. Pra um tempo de diversidade, coletividade e multiculturas.</h3>
           </div>
         </div>
+
         <div class="flex-fix">
           <div class="grid04 grid-action">
-            <a href="#" class="mini-btn outline-btn">View Details</a>
+            <a href="#" class="mini-btn outline-btn">Ver Detalhes</a>
           </div>
           <div class="grid09 grid-action">
-            <a href="#" class="mini-btn outline-btn">View Details</a>
+            <a href="#" class="mini-btn outline-btn">Ver Detalhes</a>
           </div>
         </div>
+
+         <!-- Video Suggestion // Optional -->
+
+         <div class="sidebar-item video-player">
+          <video src="https://farmriosoma.s3.amazonaws.com/site/2020/10_outubro/15_levis/lookbook_levis_01.mp4" muted="muted" autoplay="autoplay" loop="loop" playsinline="playsinline"></video>
+        </div>
+
+        <div class="divisor"></div>
+
+        <!-- Video Suggestion // Optional -->
+
+          <div class="sidebar-item video-player">
+            <video src="https://farmriosoma.s3.amazonaws.com/site/2020/10_outubro/15_levis/lookbook_levis_02.mp4" muted="muted" autoplay="autoplay" loop="loop" playsinline="playsinline"></video>
+          </div>
+
         <div class="flex-fix">
           <div class="grid07 grid-action">
-            <a href="#" class="mini-btn outline-btn">View Details</a>
+            <a href="#" class="mini-btn outline-btn">Ver Detalhes</a>
           </div>
           <div class="grid010 grid-text">
             <h3>É sobre enxergar que a vida urbana e a natureza estão sempre conectadas.</h3>
@@ -201,23 +207,40 @@
         </div>
         <div class="flex-fix">
           <div class="grid011 grid-action">
-            <a href="#" class="mini-btn outline-btn">View Details</a>
+            <a href="#" class="mini-btn outline-btn">Ver Detalhes</a>
           </div>
           <div class="grid014 grid-action">
-            <a href="#" class="mini-btn outline-btn">View Details</a>
+            <a href="#" class="mini-btn outline-btn">Ver Detalhes</a>
           </div>
         </div>
+
+        <!-- Video Suggestion // Optional -->
+
+        <div class="sidebar-item video-player">
+          <video src="https://farmriosoma.s3.amazonaws.com/site/2020/10_outubro/15_levis/lookbook_levis_03.mp4" muted="muted" autoplay="autoplay" loop="loop" playsinline="playsinline"></video>
+        </div>
+
+        <div class="divisor"></div>
+
+        <!-- Video Suggestion // Optional -->
+
+        <div class="sidebar-item video-player">
+          <video src="https://farmriosoma.s3.amazonaws.com/site/2020/10_outubro/15_levis/lookbook_levis_04.mp4" muted="muted" autoplay="autoplay" loop="loop" playsinline="playsinline"></video>
+        </div>
+        
+        
         <div class="flex-fix">
           <div class="grid016 grid-action">
-            <a href="#" class="mini-btn outline-btn">View Details</a>
+            <a href="#" class="mini-btn outline-btn">Ver Detalhes</a>
           </div>
           <div class="grid015 grid-action">
-            <a href="#" class="mini-btn outline-btn">View Details</a>
+            <a href="#" class="mini-btn outline-btn">Ver Detalhes</a>
           </div>
         </div>
+
         <div class="flex-fix">
           <div class="grid017 grid-action">
-            <a href="#" class="mini-btn outline-btn">View Details</a>
+            <a href="#" class="mini-btn outline-btn">Ver Detalhes</a>
           </div>
           <div class="grid-blank grid-text">
             <h3 class="icon icon-logo-ver"></h3>
@@ -237,7 +260,7 @@
             </div>
           </div>
           <div class="grid01 grid-action">
-            <a href="#" class="mini-btn outline-btn">View Details</a>
+            <a href="#" class="mini-btn outline-btn">Ver Detalhes</a>
           </div>
           <div class="grid02 grid-text">
             <h3>Levi’s & FARM aponta para a frente. Pra um tempo de diversidade, coletividade e multiculturas.</h3>
@@ -246,7 +269,7 @@
             
           </div>
           <div class="grid04 grid-action">
-            <a href="#" class="mini-btn outline-btn">View Details</a>
+            <a href="#" class="mini-btn outline-btn">Ver Detalhes</a>
           </div>
           <div class="grid05">
             
@@ -269,13 +292,13 @@
             </div>
           </div>
           <div class="grid07 grid-action">
-            <a href="#" class="mini-btn outline-btn">View Details</a>
+            <a href="#" class="mini-btn outline-btn">Ver Detalhes</a>
           </div>
           <div class="grid08">
             
           </div>
           <div class="grid09 grid-action">
-            <a href="#" class="mini-btn outline-btn">View Details</a>
+            <a href="#" class="mini-btn outline-btn">Ver Detalhes</a>
           </div>
         </div>
       </div>
@@ -295,7 +318,7 @@
             <h3>É sobre enxergar que a vida urbana e a natureza estão sempre conectadas.</h3>
           </div>
           <div class="grid011 grid-action">
-            <a href="#" class="mini-btn outline-btn">View Details</a>
+            <a href="#" class="mini-btn outline-btn">Ver Detalhes</a>
           </div>
           <div class="grid012">
             
@@ -305,7 +328,7 @@
           </div>
 
           <div class="grid014 grid-action">
-            <a href="#" class="mini-btn outline-btn">View Details</a>
+            <a href="#" class="mini-btn outline-btn">Ver Detalhes</a>
           </div>
         </div>
       </div>
@@ -322,13 +345,13 @@
             </div>
           </div>
           <div class="grid015 grid-action">
-            <a href="#" class="mini-btn outline-btn">View Details</a>
+            <a href="#" class="mini-btn outline-btn">Ver Detalhes</a>
           </div>
           <div class="grid016 grid-action">
-            <a href="#" class="mini-btn outline-btn">View Details</a>
+            <a href="#" class="mini-btn outline-btn">Ver Detalhes</a>
           </div>
           <div class="grid017 grid-action">
-            <a href="#" class="mini-btn outline-btn">View Details</a>
+            <a href="#" class="mini-btn outline-btn">Ver Detalhes</a>
           </div>
           <div class="grid018">
 
@@ -362,13 +385,14 @@
     <section id="nature-section" class="nature-section" data-aos="fade-up">
       <div class="nature-bg">
         <img class="nature-detail" src="img/lettering_giveback1.svg" />
-        <a href="#nature-section" class="anchor-section"><i class="icon icon-chevron-bottom"></i></a>
+        <a href="#slider-section" class="anchor-section"><i class="icon icon-chevron-bottom"></i></a>
       </div>
       <div class="nature-content">
         <p class="body md">Durante o lançamento, 14 mil árvores serão plantadas, através dos parceiros SOS Mata Atlântica e One Tree Planted. A ideia é que a coleção não só celebra a natureza como a reverencie na prática, através do plantio e do reflorestamento.</p>
         <p class="body md">É sobre levar pro mundo a importância da nossa natureza, a sua beleza e as inúmeras possibilidades de preservá-la.</p>
         <div class="arvores-detail">
-          <img src="img/lettering_giveback2.svg"/>
+          <img class="desktop" src="img/lettering_giveback2.svg"/>
+          <img class="mob" src="img/lettering_giveback2mob.svg" />
         </div>
         <div class="logo-holder">
           <img src="img/logo-ver.png" />
@@ -429,7 +453,7 @@
 
     <!-- Instagram Slider // Nature is The Future -->
 
-    <section class="slider-container" data-aos="fade-up">
+    <section id="slider-section" class="slider-container" data-aos="fade-up">
       <div class="slider-title">
         <img src="img/lettering_hashtag2.svg" />
       </div>
@@ -521,7 +545,6 @@
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="js/app.js"></script>
-    <script src="js/farm-animation.js"></script>
     <script src="js/farm-levis-vtex-products.js"></script>
     <script src="js/newsletter.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

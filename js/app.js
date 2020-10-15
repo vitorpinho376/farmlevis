@@ -11,6 +11,7 @@
     stickedMenu.classList.add('dropout');
   }  
 
+
     //News Menu Show
 
    const newsbar = document.getElementById('news-bar');
