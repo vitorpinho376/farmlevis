@@ -22,5 +22,5 @@ $(function() {
         renderItemsCount(orderForm);
     });
 
-    vtexjs.checkout.getOrderForm([items]);
+    vtexjs.checkout.getOrderForm(['items']);
 });
