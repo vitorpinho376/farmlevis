@@ -162,21 +162,25 @@ function bindEvents() {
             };
 
             $this.text('adicionando...');
-            vtexjs.checkout.addToCart([itemObj]).done(function() {
-                $this.text('incluir na mochila');
-                Swal.fire({
-                    title: 'Produto adicionado com sucesso',
-                    icon: 'success',
-                    confirmButtonText: 'ir para a mochila',
-                    confirmButtonColor: modalConfirmButtonColor,
-                    showCancelButton: true,
-                    cancelButtonText: 'continuar olhando'
-                }).then(function(data) {
-                    if (data.isConfirmed) window.location = '/checkout';
+            vtexjs.checkout.getOrderForm()
+                .then(function() {
+                    return vtexjs.checkout.addToCart([itemObj])
+                })
+                .done(function() {
+                    $this.text('incluir na mochila');
+                    Swal.fire({
+                        title: 'Produto adicionado com sucesso',
+                        icon: 'success',
+                        confirmButtonText: 'ir para a mochila',
+                        confirmButtonColor: modalConfirmButtonColor,
+                        showCancelButton: true,
+                        cancelButtonText: 'continuar olhando'
+                    }).then(function(data) {
+                        if (data.isConfirmed) window.location = '/checkout';
+                    });
+                }).fail(function() {
+                    addToCartErrorModal.fire();
                 });
-            }).fail(function() {
-                addToCartErrorModal.fire();
-            });
         } catch (error) {
             console.error(`bindEvents -> error`, error);
             $this.text('incluir na mochila');
